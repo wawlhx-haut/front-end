@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      body {
+        background-color: rgb(116, 82, 82);
+      }
+      /* * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 20px;
+        width: 100vw;
+        display: flex;
+        box-sizing: border-box;
+      }
+      div {
+        border: solid 2px #ddd;
+        padding: 10px;
+        flex: 1;
+      }
+      div:last-of-type {
+        margin-left: -2px;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        width: 200px;
+        flex-direction: column;
+      }
+      li {
+        height: 30px;
+        border: solid 2px #e67e22;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        padding-left: 10px;
+        color: #333;
+        transition: 1s;
+      }
+      a {
+        border-radius: 3px;
+        width: 20px;
+        height: 20px;
+        text-decoration: none;
+        text-align: center;
+        background: #16a085;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-item: center;
+        margin-right: 5px;
+      }
+      .remove {
+        border: solid 2px #eee;
+        opacity: 0.8;
+        color: #eee;
+      }
+      .remove a {
+        background: #eee;
+      }
+      p {
+        margin-top: 20px;
+      }
+      p span {
+        display: inline-block;
+        background: #16a085;
+        padding: 5px;
+        color: white;
+        margin-right: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      } */
+      /* body {
+        padding: 200px;
+      }
+      
+      * {
+        padding: 0;
+        margin: 0; 
+      }
+
+      input {
+        width: 200px;
+        border: solid 1px #d63031;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style: none;
+        width: 200px;
+        padding-top: 20px;
+      }
+
+      ul li:nth-of-type(odd) {
+        background: #00b894;
+      } */
+
+      /* * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 200px;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        width: 200px;
+        flex-direction: column;
+      }
+      li {
+        height: 30px;
+        border: solid 2px #e67e22;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        color: #333;
+        transition: 1s;
+      }
+      a {
+        boder-radius: 3px;
+        width: 20px;
+        height: 20px;
+        text-dectoration: none;
+        text-align: center;
+        background: #16a085;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+      }
+      .remove {
+        border: solid 2px #eee;
+        opacity: 0.8;
+        color: #eee;
+      }
+      .remove a {
+        background: #eee;
+      } */
+      /* button {
+        position: absolute;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <div desc="houdunren">在线学习</div>
+    <div desc="hdcms">开源产品</div> -->
+    <!-- <button message="后盾人">houdunren</button> -->
+    <!-- <button message="后盾人">button</button>
+    <button message="hdcms">button</button> -->
+    <!-- <button>后盾人</button> -->
+    <!-- <button message="后盾人">button</button>
+    <button message="hdcms">button</button> -->
+    <!-- <button desc="hdcma">button</button> -->
+    <!-- <div>
+      <ul>
+        <li><span>php</span> <a href="javasctipt:;">+</a></li>
+        <li><span>js</span> <a href="javascript:;">+</a></li>
+        <li><span>向军讲编程</span> <a href="javascript:;">+</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong id="count">共选了2门课</strong>
+      <p id="lists"></p>
+    </div> -->
+    <!-- <div>houdunren</div>
+    <div>hdcms</div> -->
+    <!-- <div desc="后盾人">houdunren</div>
+    <div desc="开源系统">hdcms</div> -->
+    <!-- <input type="text">
+    <ul></ul> -->
+    <!-- <form action="" onsubmit="return post()">
+      接受协议:
+      <input type="checkbox" name="agreement" message="请接受许可协议" />
+      我是学生:
+      <input type="checkbox" name="student" message="网站只对学生开放" />
+      <input type="submit" />
+  </form>  -->
+    <!-- <ul>
+      <li>houdunren.com <a href="havascript:;">x</a></li>
+      <li>hdcms.com <a href="javascript:;">x</a></li>
+      <li>houdunwang.com <a href="javascript:;">x</a></li>
+    </ul> -->
+    <script>
+      // let hd = Symbol();
+      // let edu = Symbol();
+      // console.log(hd);
+      // console.log(hd == edu);
+
+      // let hd = Symbol();
+      // hd.name = '后盾人';
+      // console.log(hd.com);
+
+      // let hd = Symbol('is name');
+      // let edu = Symbol('这是一个测试');
+      // console.log(hd);
+      // console.log(edu.toString());
+
+      // let hd = Symbol('后盾人');
+      // console.log(hd.description);
+
+      // let hd = Symbol.for('后盾人');
+      // let edu = Symbol.for('后盾人');
+      // console.log(hd == edu);
+
+      // let hd = Symbol.for('后盾人');
+      // console.log(Symbol.keyFor(hd));
+      // let edu = Symbol('houdunren');
+      // console.log(Symbol.keyFor(edu));
+
+      // let symbol = Symbol('后盾人');
+      // let obj = {
+      //   symbol: 'houdunren.com'
+      // };
+      // console.log(obj);
+
+      // let symbol = Symbol('后盾热嗯');
+      // let  obj = {
+      //   [symbol]: 'houdunren.com'
+      // };
+      // console.log(obj[symbol])
+
+      // class Cache {
+      //   static data = {};
+      //   static set(name, value) {
+      //     this.data[name] = value;
+      //   }
+      //   static get(name) {
+      //     return this.data[name];
+      //   }
+      // }
+      // let user =  {
+      //   name: '后盾人',
+      //   key: Symbol('缓存')
+      // };
+      // let cart = {
+      //   name: '购物车',
+      //   key: Symbol('购物车')
+      // };
+      // Cache.set(user.key, user);
+      // Cache.set(cart.key, cart);
+      // console.log(Cache.get(user.key));
+
+      // let symbol = Symbol('后盾人');
+      // let obj = {
+      //   name: 'hdcms.com',
+      //   [symbol]: 'houdunren.com'
+      // };
+      // // for (const key in obj) {
+      // //   console.log(key);
+      // // }
+      // // for (const key of Object.key(obj)) {
+      // //   console.log(key);
+      // // }
+
+      // for (const key of Object.getOwnPropertySymbols(obj)) {
+      //   console.log(key);
+      // }
+      // for (const key of Reflect.ownKeys(obj)) {
+      //   console.log(key);
+      // }
+
+      // const site = Symbol('网站名称');
+      // class User {
+      //   constructor(name) {
+      //     this[site] = '后盾人';
+      //     this.name = name;
+      //   }
+      //   getName() {
+      //     return `${this[site]}-${this.name}`;
+      //   }
+      // }
+      // const hd = new User('向军大叔');
+      // console.log(hd.getName());
+      // for (const key in hd) {
+      //   console.log(key);
+      // }
+
+      // let obj = { 1: 'hdcms', '1': "houdunren"};
+      // console.table(obj);
+
+      // let obj = { 1: "hdcms", "1": "houdunren" };
+      // console.table(obj);
+      // let hd = { [obj]: "后盾人" };
+      // console.table(hd);
+      // console.log(hd[obj.toString()]);
+      // console.log(hd["[object Object]"]);
+
+      // let hd = new Set(['后盾人', 'hdcms']);
+      // console.log(hd.values());
+
+      // let set = new Set();
+      // set.add(1);
+      // set.add("1");
+      // console.log(set);
+
+      // let hd = new Set();
+      // hd.add('houdunren');
+      // hd.add('hdcms');
+      // hd.add('hdcms');
+      // console.log(hd.values());
+
+      // let hd = new Set(['后扽人', 'hdcms']);
+      // console.log(hd.size);
+
+      // let hd = new Set();
+      // hd.add('hdcms');
+      // console.log(hd.has('hdcms'));
+
+      // let hd = new Set();
+      // hd.add("hdcms");
+      // hd.add("houdunren");
+      // console.log(hd.delete("hdcms"));
+      // console.log(hd.values());
+      // console.log(hd.has("hdcms"));
+
+      // let hd = new Set();
+      // hd.add('hdcms');
+      // hd.add('houdunren');
+      // hd.clear();
+      // console.log(hd.values());
+
+      // const set = new Set(["hdcms", "houdunren"]);
+      // console.log([...set]);
+      // console.log(Array.from(set));
+
+      // let hd = new Set("123456789");
+      // hd = new Set([...hd].filter(item => item < 5));
+      // console.log(hd);
+
+      // console.log([...new Set("houduenren")].join(""));
+
+      // const arr = [1, 2, 3, 5, 2, 3];
+      // console.log(...new Set(arr));
+
+      // const hd = new Set(["hdcms", "houdunren"]);
+      // console.log(hd.values());
+      // console.log(hd.keys());
+      // console.log(hd.entries());
+
+      // let arr = [7, 6, 2, 8, 2, 6];
+      // let set = new Set(arr);
+      // set.forEach((item, key) => console.log(item, key));
+
+      // let set = new Set([7, 6, 2, 8, 2, 6]);
+      // for (const iterator of set) {
+      //   console.log(iterator);
+      // }
+
+      // let obj = {
+      //   words: new Set(),
+      //   set keyword(word){
+      //     this.words.add(word);
+      //   },
+      //   show() {
+      //     let ul = document.querySelector('ul');
+      //     ul.innerHTML = '';
+      //     this.words.forEach((item) => {
+      //       ul.innerHTML += ('<li>' + item + '</li>');
+      //     })
+      //   }
+      // }
+      // document.querySelector('input').addEventListener('blur', function() {
+      //   obj.keyword = this.value;
+      //   obj.show();
+      // });
+
+      // let hd= new Set(['hdcms', 'houdunren']);
+      // let cms = new Set(['后盾人', 'hdcms']);
+      // let newSet = new Set(
+      //   [...hd].filter(item => cms.has(item))
+      // );
+      // console.log(newSet);
+
+      // let hd = new Set(['hdcms', 'houdunren']);
+      // let cms = new Set(['后盾人', 'hdcms']);
+      // let newSet = new Set(
+      //   [...hd].filter(item => !cms.has(item))
+      // );
+      // console.log(newSet);
+
+      // let hd = new Set(['hdcms', 'houdunren']);
+      // let cms = new Set(['后盾人', 'hdcms']);
+      // let newSet = [...hd, ...cms];
+      // console.log(newSet);
+
+      // new WeakSet(["hdcms", "houdunrem"]);
+      // new WeakSet("hdcms");
+
+      // new WeakSet([["hdcms"],["houdunren"]]);
+      // document.querySelectorAll("button").forEach(item => Wset.add(item));
+      // const hd = new Set();
+      // const arr = ["hdcms"];
+      // hd.add(arr);
+      // console.log(hd.has(arr));
+      // hd.delete(arr);
+      // console.log(hd.has(arr));
+
+      // const hd = new WeakSet();
+      // let arr = ["hdcms"];
+      // hd.add(arr);
+      // console.log(hd.has(arr));
+      // console.log(hd);
+      // arr = null;
+      // console.log(hd);
+      // setTimeout(() => {
+      //   console.log(hd);
+      // },1000);
+
+      // class Todos {
+      //   constructor() {}
+      //     run() {
+      //       this.items = document.querySelectorAll("ul>li");
+      //       this.lists = new WeakSet();
+      //       this.record();
+      //       this.addEvent();
+      //     }
+      //     addEvent() {
+      //       this.items.forEach(item => {
+      //         item.querySelector("a").addEventListener("click", event => {
+      //           const parentElement = event.target.parentElement;
+      //           if (!this.lists.has(parentElement)) {
+      //             alert("已经删除此TODO");
+      //           } else {
+      //             parentElement.classList.add("remove");
+      //             this.lists.delete(parentElement);
+      //           }
+      //         });
+      //       });
+      //     }
+      //     record() {
+      //       this.items.forEach(item => this.lists.add(item));
+      //     }
+      //   }
+      //  let ob =  new Todos().run();
+      //   console.log(ob);
+
+      // let m = new Map([
+      //   ['houdunren', '后盾人'],
+      //   ['hdcms', '开源系统']
+      // ]);
+      // console.log(m.get('houdunren'));
+
+      // let map = new Map();
+      // let obj = {
+      //   name: "后盾人"
+      // };
+      // map.set(obj, "houdunren.com").set("name", "hdcms");
+      // console.log(map.entries());
+
+      // const hd = new Map();
+      // const arr = [["houdunren", "后盾人"], ["hdcms","开源系统"]];
+      // arr.forEach(([key, value]) => {
+      //   hd.set(key, value);
+      // });
+      // console.log(hd);
+
+      // let arr = ["后盾人"];
+      // const hd = new Map();
+      // hd.set(arr, "houdunren.com");
+      // console.log(hd.get(arr));
+      // console.log(hd.get(["后盾人"]));
+
+      // console.log(map.size);
+      // console.log(map.has(obj1));
+
+      // let map = new Map();
+      // let obj = {
+      //   name: '后盾人'
+      // }
+      // map.set(obj, 'houdunren.com');
+      // console.log(map.get(obj));
+
+      // let map = new Map();
+      // let obj = {
+      //   name: '后盾人'
+      // }
+      // map.set(obj, 'houdunren');
+      // console.log(map.get(obj));
+      // map.delete(obj);
+      // console.log(map.get(obj));
+
+      // let map = new Map();
+      // let obj1 = {
+      //   name: 'hdcms.com'
+      // }
+      // let obj2 = {
+      //   name: 'houdunren.com'
+      // }
+      // map.set(obj1, {
+      //   title: '内容管理系统'
+      // });
+      // map.set(obj2, {
+      //   title: '后盾人'
+      // });
+      // console.log(map.size);
+      // console.log(map.clear());
+      // console.log(map.size);
+
+      // let hd = new Map([["houdunren", "后盾人"], ["hdcms", "开源系统"]]);
+      // console.log(hd.keys());
+      // console.log(hd.values());
+      // console.log(hd.entries());
+
+      // let hd = new Map([["houdunren", "后盾人"], ["hdcms", "开源系统"]]);
+      // for (const key of hd.keys()) {
+      //   console.log(key);
+      // }
+      // for (const value of hd.values()) {
+      //   console.log(value);
+      // }
+      // for (const [key, value] of hd) {
+      //   console.log(`${key} => ${value}`);
+      // }
+      // hd.forEach((value, key) => {
+      //   console.log(`${key} => ${value}`);
+      // });
+      // console.log(...hd);
+      // console.log(...hd.entries());
+      // console.log(...hd.values());
+      // console.log(...hd.keys());
+      // console.log(typeof hd);
+
+      // let newArr = [...hd].filter(function(item) {
+      //   return item[1].includes("后盾人");
+      // });
+      // hd = new Map(newArr);
+      // console.log(...hd.keys());
+      // const divMap = new Map();
+      // const divs = document.querySelectorAll("div");
+      // divs.forEach(div => {
+      //   divMap.set(div, {
+      //     content: div.getAttribute("desc")
+      //   });
+      //   console.log(divMap);
+      // });
+      // divMap.forEach((config, elem) =>{
+      //   elem.addEventListener("click", function() {
+      //     alert(divMap.get(this).content);
+      //   });
+      // });
+
+      // function post() {
+      //   let map = new Map();
+      //   let inputs = document.querySelectorAll("[message]");
+      //   inputs.forEach(item =>
+      //     map.set(item, {
+      //       message: item.getAttrbute("message"),
+      //       status: item.checked
+      //     })
+      //   );
+      //   return [...map].every(([item, config]) => {
+      //     config.status || alert (config.message);
+      //     return config.status;
+      //   });
+      // }
+
+      // new WeakSet("hdcms");
+      // const hd = new WeakMap();
+      // document
+      //   .querySelectorAll("div")
+      //   .forEach(item => hd.set(item, item.innerHTML));
+      // console.log(hd);
+
+      // let map = new WeakMap();
+      // let hd = {};
+      // map.set(hd, "hdcms");
+      // hd = null;
+      // console.log(map);
+
+      // setTimeout(() => {
+      //   console.log(map);
+      // }, 1000);
+
+      // let hd = new Function("title", "console.log(title)");
+      // hd('后盾人');
+      // function hd(num) {
+      //   return ++num;
+      // }
+      // console.log(hd(3));
+      // let user = {
+      //   name: null,
+      //   getName: function (name) {
+      //     return this.name;
+      //   },
+      //   setName (value) {
+      //     this.name = value;
+      //   }
+      // }
+      // user.setName('后盾人');
+      // console.log(user.getName());
+      // console.log(window.screenX);
+      // function screenX () {
+      //   return "后盾人";
+      // }
+      // console.log(screenX());
+      // let hd = function () {
+      //   console.log("后盾人");
+      // };
+      // window.hd();
+
+      // let hd = function (num) {
+      //   return ++num;
+      // };
+      // console.log(hd instanceof Object);
+      // let cms = hd;
+      // console.log(cms(3));
+
+      // console.log(hd(3));
+      // function hd (num) {
+      //   return ++num;
+      // };
+
+      // console.log(hd(3));
+      // function hd (num) {
+      //   return ++num;
+      // }
+      // var hd = function () {
+      //   return "hd";
+      // };
+
+      // function sum (...args) {
+      //   return args.reduce((a, b) => a + b);
+      // }
+      // console.log(sum(1, 2, 3));
+
+      // "use strict"
+      // (function () {
+      //   var web = 'houdunren';
+      // })();
+      // console.log(web);
+
+      // {
+      //   let web = 'houdunren';
+      // }
+      // console.log(web);
+
+      // console.log(hd());
+      // function hd () {
+      //   return '后盾人';
+      // }
+
+      // console.log(hd());
+      // function hd() {
+      //   return '后盾人';
+      // }
+      // var hd = function () {
+      //   return 'hdcms.com';
+      // }
+
+      // function sum(n1, n2) {
+      //   return n1 + n2;
+      // }
+      // console.log(sum(2, 3));
+
+      // function sum(n1, n2) {
+      //   return n1 + n2;
+      // }
+      // console.log(sum(2, 3));
+
+      // function sum(n1, n2) {
+      //   return n1 + n2;
+      // }
+      // console.log(sum(2));
+
+      // function avg(total, year) {
+      //   year = year || 1;
+      //   return Math.round(total / year);
+      // }
+      // console.log(avg(2000, ));
+
+      // function avg(total, year = 1) {
+      //   return Math.round(total / year);
+      // }
+      // console.log(avg(2000, ));
+
+      // function sortArray(arr, type = 'asc') {
+      //   return arr.sort((a, b) => type == 'asc' ? a - b : b - a);
+      // }
+      // console.log(sortArray([1, 3, 2, 6], 'desc'));
+
+      // function sum(total, discount = 0, dis = 0) {
+      //   return total * (1 - discount) * (1 - dis);
+      // }
+      // console.log(sum(2000, undefined, 0.3));
+      // console.log((1 / 3) * 3);
+      // console.log(1 + "1");
+
+      // function sum() {
+      //   return [...arguments].reduce((total, num) => {
+      //     return (total += num);
+      //   }, 0);
+      // }
+      // console.log(sum(2, 3, 4, 2, 6));
+
+      // function sum(...args) {
+      //   return args.reduce((a, b) => a + b);
+      // }
+      // console.log(sum(2, 3, 4, 2, 6));
+
+      // let sum = () => {
+      //   return 1 + 3;
+      // }
+      // console.log(sum());
+
+      // let sum = () => 1 + 3;
+      // console.log(sum());
+
+      // let hd = [1, 8, 3, 5].filter((item, index) => {
+      //   return item <= 3;
+      // });
+      // console.log(hd);
+
+      // let hd = [1, 8, 3, 5].filter(item => item <= 3);
+      // console.log(hd);
+
+      // function factorial(num = 3) {
+      //   return num == 1 ? num : num * factorial(--num);
+      // }
+      // console.log(factorial(5));
+
+      // function sum(...num) {
+      //   return num.length == 0 ? 0 : num.pop() + sum(...num);
+      // }
+      // console.log(sum(1, 2, 3, 4, 5, 7, 9));
+
+      // function star(row = 55) {
+      //   if (row == 0) return "";
+      //   document.write("*".repeat(row) + "<br/>");
+      //   star(--row);
+      // }
+      // star();
+
+      // let lessons = [
+      //   {
+      //     title: "媒体查询响应式布局",
+      //     click: 89
+      //   },
+      //   {
+      //     title: "FLEX弹性盒模型",
+      //     click: 45
+      //   },
+      //   {
+      //     title: "GRID栅格系统",
+      //     click: 19
+      //   },
+      //   {
+      //     title: "盒子模型详解",
+      //     click: 29
+      //   }
+      // ];
+      // function change(lessons, num, i = 0) {
+      //   if (i == lessons.length) {
+      //     return lessons;
+      //   }
+      //   lessons[i].click += num;
+      //   return change(lessons, num, ++i);
+      // }
+      // console.table(change(lessons, 100));
+      // console.log(typeof lessons);
+
+      // let hd = ([1, 2, 3]).map(item => item + 10);
+      // console.log(hd);
+
+      // let hd = [1, 2, 3];
+      // let [a, b, c] = [...hd];
+      // console.log(a);
+      // console.log(b);
+      // console.log(c);
+      // hd = [1, 2, 3];
+      // console.log(hd);
+
+      // function calupi() {
+      //   let pi = 4;
+      //   let fh = 1;
+      //   for (let i = 1; i <= 11150000; i++) {
+      //     let t = 2 * i + 1;
+      //     fh = fh * (-1);
+      //     pi = pi + fh * 4 / t;
+      //   }
+      //   return pi;
+      // }
+      // console.log(calupi());
+
+      // function hd(...args) {
+      //   console.log(args);
+      // }
+      // hd(1, 2, 3, "后盾人");
+
+      // function hd(site, ...args) {
+      //   console.log(site, args);
+      // }
+      // hd("后盾人", 1, 2, 3);
+
+      // function sum(...params) {
+      //   console.log(params);
+      //   return params.reduce((pre, cur) => pre + cur);
+      // }
+      // console.log(sum(1, 3, 2, 4));
+
+      // function sum(discount = 0, ...prices) {
+      //   let total = prices.reduce((pre, cur) => pre + cur);
+      //   return total * (1 - discount);
+      // }
+      // console.log(sum(0.1, 100, 300, 299));
+
+      // function hd(str, ...value) {
+      //   console.log(str);
+      //   console.log(values);
+      // }
+      // let name = '后盾人', url = 'houdunren';
+      // hd `站点${name}-${url}`;
+
+      // console.log(this);
+
+      // var hd = '后盾人';
+      // function get() {
+      //   // "use strict"
+      //   return this.hd;
+      // }
+      // console.log(get());
+
+      // function User() {
+      //   this.name = "后盾人";
+      //   this.say = function() {
+      //     console.log(this);
+      //     return this,name;
+      //   };
+      // }
+      // let hd = new User();
+      // console.log(hd.say());
+
+      // let obj = {
+      //   site: "后盾人",
+      //   show() {
+      //     console.log(this.site);
+      //     console.log(`this in show method: ${this}`);
+      //     function hd() {
+      //       console.log(typeof this.site);
+      //       console.log(`this in hd function: ${this}`);
+      //     }
+      //     hd();
+      //   }
+      // };
+      // obj.show();
+
+      // let lesson = {
+      //   site: "后盾人",
+      //   lists: ["js", "css", "mysql"],
+      //   // show() {
+      //   //   return this.lists.map(function (title) {
+      //   //     return `${this.site}-${title}`;
+      //   //   },this);
+      //   // }
+      //   show() {
+      //     const self = this;
+      //     return this.lists.map(function(title) {
+      //       return `${self.site}-${title}`;
+      //     });
+      //   }
+      // };
+      // console.log(lesson.show());
+
+      // var name = 'hdcms';
+      // var obj = {
+      //   name: '后盾人',
+      //   getName: function() {
+      //     return function() {
+      //       return this.name;
+      //     }
+      //   }
+      // }
+      // console.log(obj.getName()());
+
+      // var name = 'hdcms';
+      // var obj = {
+      //   name: '后盾人',
+      //   getName: function () {
+      //     var self = this;
+      //     return () => {
+      //       return this.name;
+      //     }
+      //   }
+      // }
+      // console.log(obj.getName()());
+      // console.log(self.name);
+
+      // var name = 'hdcms';
+      // var obj = {
+      //   name: '后盾人',
+      //   getName: function () {
+      //     return () => {
+      //       return this.name;
+      //     }
+      //   }
+      // }
+      // console.log(obj.getName()());
+
+      // let Dom = {
+      //   site: "后盾人",
+      //   handleEvent: function(t) {
+      //     console.log(this);
+      //   },
+      //   bind() {
+      //     const button = document.querySelector("button");
+      //     button.addEventListener("click", this);
+      //   }
+      // };
+      // Dom.bind();
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // // let hd = new User("后盾人");
+      // let hdcms = {};
+      // User.call(hdcms, 'hdcms');
+      // console.log(hdcms.name);
+
+      // function show(title) {
+      //   alert(`${title + this.name}`);
+      // }
+      // let lisi = {
+      //   name: '李四'
+      // };
+      // let wangwu = {
+      //   name: '王五'
+      // };
+      // show.call(lisi, '后盾人');
+      // show.apply(wangwu, ['HDCMS']);
+
+      // function show() {
+      //   alert(this.getAttribute('message'));
+      // }
+      // let bts = document.getElementsByTagName('button');
+      // console.log(bts);
+      // for (let i = 0; i < bts.length; i++) {
+      //   bts[i].addEventListener('click', () => show.call(bts[i]));
+      // }
+
+      // let arr = [1, 3, 2, 8];
+      // console.log(Math.max(arr));
+      // console.log(Math.max.apply(Math, arr));
+      // console.log(Math.max(...arr));
+
+      // "use strict";
+      // function Request() {
+      //   this.get = function(params = {}) {
+      //     let option = Object.keys(params)
+      //       .map(i => i + "=" + params[i])
+      //       .join("&");
+      //     return `获取数据 API:${this.url}?${option}`;
+      //   };
+      // }
+      // function Article() {
+      //   this.url = "article/index";
+      //   Request.apply(this, []);
+      // }
+      // let hd = new Article();
+      // console.log(hd.get({ row: 10, start: 3 }));
+      // function Lesson() {
+      //   this.url = "lesson/index";
+      //   Request.call(this);
+      // }
+      // let js = new Lesson();
+      // console.log(js.get({ row: 20 }));
+
+      // let a = function() {};
+      // let b = a;
+      // console.log(a === b);
+      // // let c = a.bind();
+      // let d = a.bind(c);
+      // console.log(a == c);
+
+      // function hd(a, b) {
+      //   return this.f + a + b;
+      // }
+      // let newFunc = hd.bind({ f: 1 }, 3);
+      // console.log(newFunc(2));
+      // document.querySelector("button").addEventListener(
+      //   "click",
+      //   function(event) {
+      //     console.log(event.target.innerHTML + this.url);
+      //   }.bind({ url: "houdunren.com" })
+      // );
+
+      // function count() {
+      //   let total = 0;
+      // }
+      // count();
+
+      // let site = '后盾人';
+      // function a() {
+      //   let hd = "houdunren.com";
+      //   function b() {
+      //     let cms = 'hdcms.com';
+      //     console.log(hd);
+      //     console.log(site);
+      //   }
+      //   b();
+      // }
+      // a();
+
+      // function hd() {
+      //   let n = 1;
+      //   return function() {
+      //     let b = 1;
+      //     return function() {
+      //       console.log(++n);
+      //       console.log(++b);
+      //     };
+      //   };
+      // }
+      // let a = hd()();
+      // a();
+      // a();
+
+      // function User() {
+      //   let a = 1;
+      //   this.show = function() {
+      //     console.log(a++);
+      //   };
+      // }
+      // let a = new User();
+      // a.show();
+      // a.show();
+      // let b = new User();
+      // b.show();
+
+      // {
+      //   let a = 9;
+      // }
+      // console.log(a);
+      // if (ture) {
+      //   var i = 1;
+      // }
+      // console.log(i);
+
+      // for (let i = 0; i < 10; i++) {
+      //   setTimeout(() => {
+      //     console.log(i);
+      //   }, 1500);
+      // }
+
+      // let arr = [];
+      // for (let i = 0; i < 10; i++) {
+      //   arr.push(() => i);
+      // }
+      // console.log(arr[3]);
+
+      // var arr = [];
+      // for (var i = 0; i < 10; i++) {
+      //   (function (a) {
+      //     arr.push(() => a);
+      //   })(i);
+      // }
+      // console.log(arr[3]());
+
+      // var a;
+      // for(var a; a <= 10; a++) {
+      //   for()
+      // }
+
+      // function hd() {
+      //   let name = '后盾人';
+      //   return function () {
+      //     return name;
+      //   }
+      // }
+      // let hdcms = hd();
+      // console.log(hdcms());
+
+      // let arr = [3, 2, 4, 1, 5, 6];
+      // function between(a, b) {
+      //   return function(v) {
+      //     return v >= a && v <= b;
+      //   };
+      // }
+      // console.log(arr.filter(between(3, 5)));
+
+      // var btns = document.querySelectorAll("button");
+      // for (let i = 0; i < btns.length; i++) {
+      //   btns[i].onclick = (function(i) {
+      //     return function() {
+      //       alert(`点击了第${i + 1}个按钮`);
+      //     };
+      //   })(i);
+      // }
+
+      // let btns = document.querySelectorAll("button");
+      // btns.forEach(function(item) {
+      //   let bind = false;
+      //   item.addEventListener("click", function() {
+      //     if (!bind) {
+      //       let left = 1;
+      //       bind = setInterval(function() {
+      //         item.style.left = left++ + "px";
+      //       }, 100);
+      //       console.log(bind);
+      //     }
+      //   });
+      // });
+      // let divs = document.querySelectorAll("div");
+      // divs.forEach(function(item) {
+      //   item.addEventListener("click", function() {
+      //     console.log(item.getAttribute("desc"));
+      //   });
+      //   console.log(item);
+      // });
+
+      // divs.forEach(function(item) {
+      //   let desc = item.getAttribute("desc");
+      //   item.addEventListener("click", function() {
+      //     console.log(desc);
+      //   });
+      // });
+
+      // let a = function() {
+      //   let b = 1;
+      //   function nb() {
+      //     console.log(b);
+      //   }
+      // }
+
+      // let hd = {
+      //   user: "后盾人",
+      //   get: function() {
+      //         a:  function name () {
+      //           return () => this.user;
+      //     }
+      //   }
+      // };
+      // console.log(hd.get().a);
+
+      // let name = "向军";
+      // let grade = [
+      //   { lesson: "js", score: 99 },
+      //   { lesson: "mysql", score: 85 }
+      // ];
+      // function average(grade, name) {
+      //   const total = grade.reduce((t, a) => t + a.score, 0);
+      //   return name + ":" + total / grade.length + "分";
+      // }
+      // console.log(average(grade, name));
+
+      // let name = "后盾人";
+      // let obj = {
+      //   name,
+      //   get() {
+      //     return this.name;
+      //   }
+      // };
+      // console.log(obj.get());
+
+      // let hd = {};
+      // let houdunren = new Object();
+      // console.log(hd, houdunren);
+      // console.log(hd.constructor);
+      // console.log(houdunren.constructor);
+
+      // let user = {
+      //   name: '向军'
+      // };
+      // console.log(user.name);
+
+      // console.log(user['name']);
+
+      // let user = {};
+      // user["my-age"] = 28;
+      // console.log(user["my-age"]);
+
+      // const hd = {
+      //   name: "后盾人"
+      // };
+      // hd.age = "10";
+      // hd.show = function() {
+      //   return `${this.name}已经${this.age}岁了`;
+      // };
+      // console.log(hd.show());
+      // console.log(hd);
+      // delete hd.show;
+      // delete hd.age;
+      // console.log(hd);
+      // console.log(hd.age)
+
+      // let lisi = {
+      //   name: "李四",
+      //   age: 22,
+      //   grade: {
+      //     math: 99,
+      //     english: 67
+      //   },
+      //   avgGrade: function() {
+      //     let total = 0;
+      //     for (const key in this.grade) {
+      //       total += this.grade[key];
+      //     }
+      //     return total / this.propertyCount("grade");
+      //   },
+      //   propertyCount: function(property) {
+      //     let count = 0;
+      //     for (const key in this[property]) count++;
+      //     return count;
+      //   }
+      // }
+      // console.log(lisi.avgGrade());
+
+      // let xj = {
+      //   name: "相聚",
+      //   show() {
+      //     return this.name;
+      //   }
+      // };
+      // let hd = xj;
+      // xj = null;
+      // console.log(hd.show());
+
+      // let hd = { name: "后盾人", web: "houdunren.com" };
+      // let info = { ...hd, site: "hdcms" };
+      // console.log(info);
+
+      // function upload(params) {
+      //   let config = {
+      //     type: "*.jpeg, *.png",
+      //     size: 10000
+      //   };
+      //   params = { ...config, ...params };
+      //   console.log(params);
+      // }
+      // upload({ size: 999 });
+
+      // let houdunren = new Number(1);
+      // // console.log(houdunren + 3);
+      // // console.log(houdunren + '3');
+      // console.log(houdunren == '1');
+
+      // let hd = {
+      //   num: 1,
+      //   [Symbol.toPrimitive]: function() {
+      //     return this.num;
+      //   }
+      // };
+      // console.log(hd + 3);
+
+      // let hd = {
+      //   name: "后盾人",
+      //   num: 1,
+      //   valueOf: function() {
+      //     console.log("valueOf");
+      //     return this.num;
+      //   },
+      //   toString: function() {
+      //     console.log("toString");
+      //     return this.name;
+      //   }
+      // };
+      // console.log(hd + 3);
+      // console.log(`${hd}向军`);
+
+      // let info = { name: "后盾人", url: "houdunren.com;" };
+      // let { name: n, url: u } = info;
+      // console.log(n);
+      // let { name, url } = { name: '后盾人', url: 'houdunren.com' };
+      // console.log(name);
+
+      // function hd() {
+      //   return {
+      //     name: '后盾人',
+      //     url: 'houdunren.com'
+      //   };
+      // }
+      // let { name: n, url: u } = hd();
+      // console.log(n);
+
+      // "use strict"
+      // function hd({ name, age }) {
+      //   console.log( name, age );
+      // }
+      // hd({ name:1 , age:1  });
+
+      // const {random}  = Math;
+      // console.log(random());
+
+      // "use strict";
+      // ({name, url} = {name: '后盾人', })
+
+      // let web = { name: "后盾人", url: "houdunren.com" }
+      // let { name, url } = web;
+      // console.log(name);
+
+      // let [, url] = ['后盾人', 'houdunren.com'];
+      // console.log(url);
+      // let { name } = { name: '后盾人', url: 'houdunren.com' };
+      // console.log(name);
+
+      // let name = "后盾人", url = "houdunren.com";
+      // let hd = { name: name, url: url };
+      // console.log(hd);
+      // let opt = { name, url };
+      // console.log(opt);
+
+      // const hd = {
+      //   name: '后盾人',
+      //   lessons:{
+      //     title: 'JS'
+      //   }
+      // }
+      // const {name, lessons: {title}} = hd;
+      // console.log(name, title);
+
+      // let [name, site = 'hdcms'] = ['后盾人'];
+      // console.log(site);
+      // let {name, url, user='向军大叔'} = {name: '后盾人', url: 'houdunren.com'};
+      // console.log(name, user);
+
+      // function createElement(options) {
+      //   let {
+      //     width = '200px',
+      //     height = '100px',
+      //     backgroundColor = 'red'
+      //   } = options;
+
+      //   const h2 = document.createElement('h2');
+      //   h2.style.width = width;
+      //   h2.style.height = height;
+      //   h2.style.backgroundColor = backgroundColor;
+      //   document.body.appendChild(h2);
+      // }
+      // createElement({
+      //   backgroundColor: 'green'
+      // });
+
+      // function hd([a, b]) {
+      //   console.log(a, b);
+      // }
+      // hd(['后盾人', 'hdcms']);
+
+      // function hd({name, url, user='向军大叔'}) {
+      //   console.log(name, url. user);
+      // }
+      // hd({name: '后盾人', 'url': 'houdunren.com'});
+
+      // function user(name, { sex, age } = {}) {
+      //   console.log(name, sex, age);
+      // }
+      // user("向军大叔", { sex: "男", age: 18 });
+
+      // let obj = {name: "后盾人"};
+      // obj.site = "houdunren.com";
+      // console.log(obj);
+
+      // let obj = { name: "后盾人" };
+      // delete obj.name;
+      // console.log( obj.name );
+
+      // let obj = { name: '后盾人'};
+      // console.log(obj.hasOwnProperty('name'));
+
+      // let arr = ["后盾人"];
+      // console.log(arr);
+      // console.log(arr.hasOwnProperty("length"));
+      // console.log(arr.hasOwnProperty("concat"));
+      // console.log("concat" in arr);
+
+      // let obj = {name: "后盾人"};
+      // let hd = {
+      //   web: "houdunren.com"
+      // };
+      // Object.setPrototypeOf(obj, hd);
+      // console.log(obj);
+      // console.log("web" in obj);
+      // console.log(obj.hasOwnProperty("web"));
+
+      // "use strict";
+      // let hd = { a: 1, b: 2 };
+      // hd = Object.assign(hd, { f: 1 }, { m: 9 });
+      // console.log(hd);
+
+      // let id = 0;
+      // const user = {
+      //   [`id-${id++}`]: id,
+      //   [`id-${id++}`]: id,
+      //   [`id-${id++}`]: id
+      // };
+      // console.log(user);
+      
+      // const lessons = [
+      //   {
+      //     title: "媒体查询响应式布局",
+      //     category: "css"
+      //   },
+      //   {
+      //     title: "FLEX弹性盒模型",
+      //     category: "css"
+      //   },
+      //   {
+      //     tirle: "MYSQL多表查询随意操作",
+      //     category: "mysql"
+      //   }
+      // ];
+      // let lessonObj = lessons.reduce((obj, cur, index) => {
+      //   obj[`${cur["category"]}-${index}`] = cur;
+      //   return obj;
+      // }, {});
+      // console.log(lessonObj);
+      // console.log(lessonObj["css-0"]);
+
+      // let user = {
+      //   name: "houdunren"
+      // };
+      // let hd = {
+      //   stu: user
+      // };
+      // hd.stu.name = "hdcms";
+      // console.log(user.name);
+
+      // const hd = {
+      //   name: "后盾人",
+      //   age: 10
+      // };
+      // console.log(Object.keys(hd));
+      // console.log(Object.values(hd));
+      // console.table(Object.entries(hd));
+
+      // const hd = {
+      //   name: "后盾人",
+      //   age: 10
+      // };
+      // for (let key in hd) {
+      //   console.log(key, hd[key]);
+      // }
+
+      // const hd = {
+      //   name: "后盾人",
+      //   age
+      // };
+      // for (const key of Object.key(hd)) {
+      //   console.log(key); 
+      // }
+
+    </script>
+  </body>
+</html>

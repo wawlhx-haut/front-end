@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+    function kousuanti(n,m){
+        // n为口算范围
+        // m为出题数量,但不是精确的
+
+      for (let i = 0; i <= m; i++) {
+        const ul = document.querySelector("ul");
+        function random(num) {
+          return Math.ceil(Math.random() * num);
+        }
+        const a5 = document.createElement("li");
+        let a1 = `${random(n)}`;
+        let a2 = `${random(n)}`;
+        let a3 = `${random(n)}`;
+        let a4 = parseInt(a1) + parseInt(a2) + parseInt(a3);
+        let a6 = parseInt(a1) + parseInt(a2);
+        if (a6 <= n) {
+          if (a4 <= n) {
+            a5.innerHTML = `${a1}+${a2}+${a3}=`;
+            ul.appendChild(a5);
+          }
+        }
+
+        const b5 = document.createElement("li");
+        let b1 = `${random(n)}`;
+        let b2 = `${random(n)}`;
+        let b3 = `${random(n)}`;
+        let b4 = parseInt(b1) - parseInt(b2) - parseInt(b3);
+        let b6 = parseInt(b1) - parseInt(b2);
+        if (b6 >= 0 && b6 <= n) {
+          if (b4 >= 0 && b4 <= n) {
+            b5.innerHTML = `${b1}-${b2}-${b3}=`;
+            ul.appendChild(b5);
+          }
+        }
+        const c5 = document.createElement("li");
+        let c1 = `${random(n)}`;
+        let c2 = `${random(n)}`;
+        let c3 = `${random(n)}`;
+        let c4 = parseInt(c1) + parseInt(c2) - parseInt(c3);
+        let c6 = parseInt(c1) + parseInt(c2);
+        if (c6 >= 0 && c6 <= n) {
+          if (c4 > 0 && c4 <= n) {
+            c5.innerHTML = `${c1}+${c2}-${c3}=`;
+            ul.appendChild(c5);
+          }
+        }
+
+        const d5 = document.createElement("li");
+        let d1 = `${random(n)}`;
+        let d2 = `${random(n)}`;
+        let d3 = `${random(n)}`;
+        let d4 = parseInt(d1) - parseInt(d2) + parseInt(d3);
+        let d6 = parseInt(d1) - parseInt(d2);
+        if (d6 >= 0 && d6 <= n) {
+          if (d4 > 0 && d4 <= n) {
+            d5.innerHTML = `${d1}-${d2}+${d3}=`;
+            ul.appendChild(d5);
+          }
+        }
+      }
+    }
+    kousuanti(120,10000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* body {
+        background-color: black;
+      } */
+      /* body {
+        padding: 50px;
+        background: #34495e;
+      }
+      input {
+        border: solid 10px #ddd;
+        height: 30px;
+      }
+      .error {
+        border: solid 10px red;
+      } */
+    </style>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <!-- <button message="后盾人" class="red">后盾人</button>
+    <button message="hdcms">hdcms</button> -->
+    <!-- <input type="text" validate rule="max:12, min:3" />
+    <input type="text" validate rule="max:3, isNumber" /> -->
+    <!-- <input type="text" v-model="title" />
+    <input type="text" v-model="title" />
+    <div v-bind="title"></div> -->
+    <script>
+      // let obj = {
+      //   name: '后盾人',
+      //   user: {
+      //     name: 'hdcms'
+      //   }
+      // }
+      // let a = obj;
+      // let b = obj;
+      // a.name = 'lisi';
+      // console.log(b.name);
+
+      // let obj = {name: '后盾人'};
+      // let hd = {};
+      // for (const key in obj) {
+      //   hd[key] = obj[key];
+      // }
+      // hd.name = "hdcms";
+      // console.log(hd);
+      // console.log(obj);
+
+      // let obj = {
+      //   name: "后盾人"
+      // };
+      // let hd = { ...obj };
+      // hd.name = "hdcms";
+      // console.log(hd);
+      // console.log(obj);
+
+      // let obj = {
+      //   name: "后盾人",
+      //   user: {
+      //     name: "hdcms"
+      //   },
+      //   data: []
+      // };
+      // let a = obj;
+      // let b = obj;
+      // function copy(object) {
+      //   let obj = {}
+      //   for (const key in object) {
+      //     obj[key] = object[key];
+      //   }
+      //   return obj;
+      // }
+      // let newObj = copy(obj);
+      // newObj.name = "hdcms";
+      // newObj.user.name = "houdunren.com";
+      // console.log(newObj);
+      // console.log(obj);
+      // function copy(object) {
+      //   let obj = object instanceof Array? [] : {};
+      //   for (const [k, v] of Object.entries(object)) {
+      //     obj[k] = typeof v == "object" ? copy(v) : v;
+      //   }
+      //   return obj;
+      // }
+      // let hd = copy(obj);
+      // hd.data.push("向军");
+      // console.log(JSON.stringify(hd, null, 2));
+      // console.log(JSON.stringify(obj, null, 2));
+
+      // const xj = {
+      //   name: "向军",
+      //   show() {
+      //     console.log(this.name);
+      //   }
+      // };
+      // const hd = {
+      //   name: "后盾人",
+      //   show() {
+      //     console.log(this.name);
+      //   }
+      // };
+      // function stu(name) {
+      //   return {
+      //     name,
+      //     show() {
+      //       console.log(this.name);
+      //     }
+      //   };
+      // }
+      // const lisi = stu("李四");
+      // lisi.show();
+      // const xj = stu("向军");
+      // xj.show();
+
+      // function Student(name) {
+      //   this.name = name;
+      //   this.show = function() {
+      //     console.log(this.name);
+      //   };
+      // }
+      // const lisi = new Student("李四");
+      // lisi.show();
+      // const xj = new Student("向军");
+      // xj.show();
+
+      // function ArrayObject(...values) {
+      //   const arr = new Array();
+      //   arr.push.apply(arr, values);
+      //   arr.string = function(sym = "|") {
+      //     return this.join(sym);
+      //   };
+      //   return arr;
+      // }
+      // const array = new ArrayObject(1, 2, 3);
+      // console.log(array);
+      // console.log(array.string("-"));
+
+      // "use strict";
+      // function User() {
+      //   this.show = function () {
+      //     console.log(this);
+      //   };
+      // }
+      // let hd = new User();
+      // hd.show();
+      // let xj = hd.show;
+      // xj()
+
+      // const num = new Number(99);
+      // console.log(num.valueOf());
+      // const string = new String("后盾人");
+      // console.log(string.valueOf());
+      // const boolean = new Boolean(true);
+      // console.log(boolean.valueOf());
+      // const date = new Date();
+      // console.log(date.valueOf() * 1);
+      // const regexp = new RegExp("\\d+");
+      // console.log(regexp.test(99));
+      // let hd = new Object();
+      // hd.name = "后盾人";
+      // console.log(hd);
+
+      // const hd = {
+      //   name: "后盾人"
+      // };
+      // console.log(hd.constructor);
+      // const hdcms = new Object();
+      // hdcms.title = "开源内容管理系统";
+      // console.log(hdcms);
+
+      // function hd(name) {
+      //   console.log(hd.toString());
+      //   console.log(hd.length);
+      // }
+      // function hd(name) {}
+      // console.log(hd.constructor);
+
+      // const User = new Function(
+      //   `name`,
+      //   `
+      //   this.name = name;
+      //   this.show = function() {
+      //     return this.name;
+      //     };
+      //     `
+      // );
+      // const lisi = new User("李四");
+      // console.log(lisi.show());
+
+      // function User(name, age) {
+      //   this.name = name;
+      //   this.age = age;
+      //   this.info = function() {
+      //     teturn this.age > 50 ? "中年人" : "年轻人";
+      //   };
+      //   this.about = function() {
+      //     return `${this.name}是${this.info()}`;
+      //   };
+      // }
+      // let lisi = new User("李四", 22);
+
+      // function User(name, age) {
+      //   this.name = name;
+      //   this.age = age;
+      //   this.info = function() {
+      //     return this.age >
+      //   }
+      // }
+
+      // function User(name, age) {
+      //   let data = { name, age };
+      //   let info = function () {
+      //     return data.age > 50 ? "中年人" : "年轻人";
+      //   };
+      //   this.message = function() {
+      //     return `${data.name}是${info()}`;
+      //   };
+      // }
+      // let lisi = new User("后盾人", 22);
+      // console.log(lisi.message());
+
+      // "use strict";
+      // const user = {
+      //   name: "向军",
+      //   age: 18
+      // };
+      // let desc = Object.getOwnPropertyDescriptor(user, "name");
+      // console.log(JSON.stringify(desc, null, 2));
+
+      // "use strict";
+      // const user = {
+      //   name: "向军",
+      //   age: 18
+      // };
+      // let desc = Object.getOwnPropertyDescriptors(user);
+      // console.log(JSON.stringify(desc, null, 2));
+
+      // "use strict";
+      // const user = {
+      //   name: "向军"
+      // };
+      // Object.defineProperty(user, "name", {
+      //   value: "后盾人",
+      //   writable: false,
+      //   enumerable: false,
+      //   configurable: false
+      // });
+
+      // // user.name = "a";
+      // console.log(object.keys(user));
+      // delete user.name;
+
+      // "use strict";
+      // let user = {};
+      // Object.defineProperties(user, {
+      //   name: { value: "向军", writable: false },
+      //   age: { value: 18 }
+      // });
+      // console.log(user);
+      // user.name = "后盾人";
+
+      // "use strict";
+      // const user = {
+      //   name: "向军"
+      // };
+      // Object.preventExtensions(user);
+      // user.age = 18;
+
+      // "use strict";
+      // const user = {
+      //   name: "向军"
+      // };
+      // Object.preventExtensions(user);
+      // console.log(Object.isExtensible(user));
+
+      // "use strict";
+      // const user = {
+      //   name: "后盾人",
+      //   age: 18
+      // };
+      // console.log(Object.getOwnPropertyDescriptors(user));
+      // Object.seal(user);
+      // console.log(
+      //   JSON.stringify(Object.getOwnPropertyDescriptors(user), null, 2)
+      // );
+      // Object.seal(user);
+      // console.log(Object.isSealed(user));
+      // delete user.name;
+
+      // "use strict";
+      // const user = {
+      //   name: "向军"
+      // };
+      // Object.seal(user);
+      // console.log(Object.isSealed(user));
+
+      // "use strict";
+      // const user = {
+      //   name: "向军"
+      // };
+      // Object.freeze(user);
+      // user.name = "后盾人";
+
+      // "use strict";
+      // const user = {
+      //   name: '向军'
+      // }
+      // Object.freeze(user);
+      // console.log(Object.isFrozen(user));
+
+      // "use strict";
+      // const user = {
+      //   const  user = {
+      //     data: { name: '后盾人', age: null },
+      //     set age(value) {
+      //       if (typeof value != "number" || value > 100 || value < 10) {
+      //         throw new Error("年龄格式错误");
+      //       }
+      //       this.data.age = value;
+      //     },
+      //     get age() {
+      //       return `年龄是: ${this.data.age}`;
+      //     }
+      //   }
+      // };
+
+      // user.age = 99;
+      // console.log(user.age);
+
+      // let Lesson = {
+      //   lists: [
+      //     { name: "js", price: 100 },
+      //     { name: "mysql", price: 212 },
+      //     { name: "vue.js", price: 98 }
+      //   ],
+      //   get total() {
+      //     function () {
+      //     return this.lists.reduce((t, b) => t + b.price, 0);
+      //     }
+      //     }
+      //   };
+      //   console.log(Lesson.total);
+      //   Lesson.total = 30;
+      //   console.log(Lesson.total);
+
+      // const web = {
+      //   name: "后盾人",
+      //   url: "houdunren.com",
+      //   get site() {
+      //     return `${this.name} ${this,url}`;
+      //   },
+      //   set site(value) {
+      //     [this.name, this.url] = value.split(",");
+      //   }
+      // };
+      // // web.site = "后盾人,hdcms.com";
+      // web.site = "houdunren, hdcms.jcomn"
+      // console.log(web.site);
+
+      // const web = {
+      //   name: "后盾人",
+      //   url: "houdunren.com",
+      //   get site() {
+      //     return `${this.name} ${this.url}`;
+      //   },
+      //   set site(value) {
+      //     [this.name, this.url] = value.split(",");
+      //   }
+      // };
+      // console.log(web.site);
+      // web.site = "后盾人, hdcms.com";
+      // console.log(web.site);
+
+      // let Request = {
+      //   get token() {
+      //     let con = localStorage.getItem('token');
+      //     if(!con) {
+      //       alert('请登陆后获取token')
+      //     } else {
+      //       return con;
+      //     }
+      //   },
+      //   set token(con) {
+      //     localStorage.setItem('token', con);
+      //   }
+      // };
+      // console.log(Request.token);
+
+      // "use strict";
+      // const user = {
+      //   get name() {
+      //     return this._name;
+      //   },
+      //   set name(value) {
+      //     if (value.length <= 3) {
+      //       throw new Error("用户名不能小于三位");
+      //     }
+      //     this._name = value;
+      //   }
+      // };
+      // user.name = "后盾人教程";
+      // console.log(user.name);
+      // console.log(Object.getOwnPropertyDescriptor(user));
+
+      // function User(name, age) {
+      //   let data = { name, age };
+      //   Object.defineProperties(this, {
+      //     name: {
+      //       get() {
+      //         return data.name;
+      //       },
+      //       set(value) {
+      //         if (value.trim() == "") throw new Error("无效的用户名");
+      //         data.name = value;
+      //       }
+      //     },
+      //     age: {
+      //       get() {
+      //         return data.name;
+      //       },
+      //       set(value) {
+      //         if (value.trim() == "") throw new Error("无效的用户名");
+      //         data.name = value;
+      //       }
+      //     }
+      //   });
+      // }
+      // let hd = new User("后盾人", 33);
+      // console.log(hd.name);
+      // hd.name = "向军1";
+      // console.log(hd.name);
+
+      // "use strict";
+      // const DATA = Symbol();
+      // class User {
+      //   constructor(name, age) {
+      //     this[DATA] = { name, age };
+      //   }
+      //   get name() {
+      //     return this[DATA].name;
+      //   }
+      //   set name(value) {
+      //     return this[DATA].name;
+      //   }
+      //   get age() {
+      //     return this[DATA].name;
+      //   }
+      //   set age(value) {
+      //     if (value.trim() == "") throw new Error("无效的用户名");
+      //     this[DATA].name = value;
+      //   }
+      // }
+      // let hd = new User("后盾人", 33);
+      // console.log(hd.name);
+      // hd.name = "向军1";
+      // console.log(hd.name);
+      // console.log(hd);;
+
+      // "use strict";
+      // const hd = { name: "houdunren" };
+      // const proxy = new Proxy(hd, {
+      //   get(obj, property) {
+      //     return obj[property];
+      //   },
+      //   set(obj, property, value) {
+      //     obj[property] = value;
+      //     return true;
+      //   }
+      // });
+      // proxy.age = 10;
+      // console.log(hd);
+
+      // function factorial(num) {
+      //   return num == 1 ? 1 : num * factorial(num - 1);
+      // }
+      // let proxy = new Proxy(factorial, {
+      //   apply(func, obj, args) {
+      //     console.time("run");
+      //     func.apply(obj, args);
+      //     console.timeEnd("run");
+      //   }
+      // });
+      // proxy.apply(this, [1, 2, 3]);
+
+      // const stringDot = {
+      //   get(target, key) {
+      //     const title = target[key].title;
+      //     const len = 5;
+      //     return title.length > len
+      //       ? title.substr(0, len) + ".".repeat(3)
+      //       : title;
+      //   }
+      // };
+      // const lessons = [
+      //   {
+      //     title: "媒体查询响应式布局",
+      //     category: "css"
+      //   },
+      //   {
+      //     title: "FLEX弹性盒模型",
+      //     category: "css"
+      //   },
+      //   {
+      //     title: "MYSQL多表查询随意操作",
+      //     category: "mysql"
+      //   }
+      // ];
+      // const stringDotProxy = new Proxy(lessons, stringDot);
+      // console.log(stringDotProxy[0]);
+
+      // function View() {
+      //   //设置代理拦截
+      //   let proxy = new Proxy(
+      //     {},
+      //     {
+      //       get(obj, property) {},
+      //       set(obj, property, value) {
+      //         obj[property] = value;
+      //         document.querySelectorAll(
+      //           `[v-model="${property}"],[v-bind="${property}"]`
+      //         ).forEach(el => {el.innerHTML = value;
+      //         el.value = value;});
+      //       }
+      //     }
+      //   );
+      //   //初始化绑定元素事件
+      //   this.run = function() {
+      //     const els = document.querySelectorAll("[v-model]");
+      //     els.forEach(item => {
+      //       item.addEventListener("keyup", function() {
+      //         proxy[this.getAttribute("v-model")] = this.value;
+      //       });
+      //     });
+      //   };
+      // }
+      // let view = new View().run();
+
+      // "use strict";
+      // class validate {
+      //   max(value, len) {
+      //     return value.length <= len;
+      //   }
+      //   min(value, len) {
+      //     return value.length >=  len;
+      //   }
+      //   isNumber(value) {
+      //     return /^\d+/.test(value);
+      //   }
+      // }
+      // //代理工场
+      // function makeProxy(target) {
+      //   return new Proxy(target, {
+      //     get(target, key) {
+      //       return target[key];
+      //     },
+      //     set(targer, key, el) {
+      //       const rule = el.getAttribute("rule");
+      //       const validate = new Validate();
+      // s     let state = rule.split(",").every(rule => {
+      //         const info = rule.split(";");
+      //         return validate[info[0]](el.value, info[1]);
+      //       });
+      //       el.classList[state ? "remove" : "add"]("error");
+      //       return true;
+      //     }
+      //   });
+      // }
+      // const nodes =  makeProxy(document.querySelectorAll("[validate]"));
+      // nodes.forEach((item, i) => {
+      //   item.addEventListener("keyup", function() {
+      //     nodes[i] = this;
+      //   });
+      // });s
+
+      // let hd = {
+      //   "title": "后盾人",
+      //   "url": "houdunren",
+      //   "teacher": {
+      //     "name": "向军大叔",
+      //   },
+      //   // "toJSON": function () {
+      //   //   return {
+      //   //     "title": this.url,
+      //   //     "name": this.teacher.name
+      //   //   };
+      //   // }
+      // }
+      // // console.log(JSON.stringify(hd));
+      // // console.log(JSON.stringify(hd, ['title', 'url']));
+      // // console.log(JSON.stringify(hd, null, 4));
+      // let jsonStr = JSON.stringify(hd);
+      // // console.log(JSON.parse(jsonStr));
+      // console.log(
+      //   JSON.parse(jsonStr, (key, value) => {
+      //     if (key == "title") {
+      //       return `[推荐] ${value}`;
+      //     }
+      //     return value;
+      //   })
+      // );
+
+      // let hd = ["a"];
+      // console.log(hd.concat("b"));
+      // console.log(hd);
+
+      // let hd = { name: "后盾人" };
+      // console.log(hd);
+
+      // let x = {};
+      // let y = {};
+      // console.log(Object.getPrototypeOf(x) == Object.getPrototypeOf(y));
+
+      // let hd = { name: 3 };
+      // console.log(hd.hasOwnProperty("name"));
+      // let xj = Object.create(null, {
+      //   name: {
+      //     value: "向军"
+      //   }
+      // });
+      // // console.log(xj.hasOwnProperty("name"));
+      // console.log(Object.keys(xj));
+
+      // function User() {}
+      // User._proto_.view = function() {
+      //   console.log("User function view method");
+      // };
+      // User.view();
+      // User.prototype.show = function() {
+      //   console.log("后盾人");
+      // };
+      // let hd = new User();
+      // hd.show();
+      // console.log(User.prototype == hd._proto_);
+
+      // function User() {}
+      // User.__proto__.view = function() {
+      //   console.log("User function view method");
+      // };
+      // User.view();
+      // console.dir(User);
+      // console.dir(User);
+      // User.prototype.show = function show () {
+      //   console.log("后盾人");
+      // }
+      // let hd = new User();
+      // hd.show();
+      // console.log(User.prototype == hd);
+
+      // let hd = new Object();
+      // hd.name = "后盾人";
+      // // console.dir(Object);
+      // Object.prototype.show = function() {
+      //   console.log("houdunren.com");
+      // }
+      // function User() {}
+      // console.dir(User);
+      // console.log(User.prototype.prototype == User.__proto__.prototype);
+      // console.dir(Object.prototype);
+      // let xj = new User();
+      // xj.show();
+      // User.show();
+
+      //  let hd = {};
+      //  console.log(hd.__proto__ == Object.prototype);
+      // let arr = [];
+      // console.dir(arr.__proto__ == Array.prototype);
+      // let str = "";
+      // console.log(str.__proto__ == String.prototype);
+      // let bool = new Boolean();
+      // console.log(bool.prototype == Boolean.prototype);
+
+      // let hd = {};
+      // console.dir(hd);
+
+      // let hd = new Object();
+      // Object.prototype.show = function() {
+      //   console.log("houdunren");
+      // };
+      // // hd.show();
+      // // hd.name = "后盾人";
+      // // console.dir(Object);
+      // function User() {}
+      // console.dir(User);
+      // console.dir(Object.prototype);
+
+      // let hd = {};
+      // console.dir(hd);
+      // console.dir(Object.prototype);
+
+      // console.dir(Array.prototype);
+      // console.dir(Array.__proto__);
+      // let arr = new Array();
+      // console.dir(arr);
+
+      // let hd = {};
+      // let xj = {};
+      // console.log(hd.__proto__ == Object.prototype);
+
+      // let hd = { name: "hd" };
+      // let parent = { name: "parent",
+      // show(){
+      //   console.log("parent method:" + this.name)
+      // } };
+      // Object.setPrototypeOf(hd, parent);
+      // console.dir(hd);
+      // // hd.show();
+      // // parent.show();
+
+      // console.log(Object.getPrototypeOf(hd));
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // User.prototype = {
+      //   constructor: User,
+      //   show() {
+      //     console.log(this.name);
+      //   }
+      // }
+      // // console.dir(User);
+      // // console.log(User.prototype.__proto__ == Object.prototype);
+      // // console.log(User.prototype.constructor == User);
+      // let lisi = new User.prototype.constructor("李四");
+      // console.log(lisi);
+
+      // function User(name) {
+      //   this.name = name;
+      //   this.show = function() {
+      //     console.log(this.name);
+      //   }
+      // }
+      // let hd = new User("后盾人");
+      // console.log(hd);
+      // function creatByObject(obj, ...args) {
+      //  const constructor =  Object.getPrototypeOf(obj).constructor;
+      //   return new constructor(...args);
+      // }
+      // let xj = creatByObject(hd, "向军");
+      // xj.show();
+
+      // function A() {}
+      // function B() {}
+      // function C() {}
+      // let c = new C();
+      // let b = new B();
+      // let a = new A();
+      // A.protorype = b;
+      // B.prototype = c;
+      // console.log(a instanceof A);
+      // console.log(a instanceof C);
+      // console.log(a instanceof C);
+      // console.log(b instanceof A);
+
+      // let a = {};
+      // let b = {};
+      // // console.log(b.__proto__.isPrototypeOf(a));
+      // let c = {};
+      // Object.setPrototypeOf(b, c);
+      // Object.setPrototypeOf(a, b);
+      // console.log(b.isPrototypeOf(a));
+      // console.log(c.isPrototypeOf(b));
+      // console.log(c.isPrototypeOf(a));
+
+      // let a= { url: "houdunren" };
+      // let b = { name: "后盾人" };
+      // Object.setPrototypeOf(a, b);
+      // console.log("name" in a);
+      // console.log(a.hasOwnProperty("name"));
+      // console.log(a.hasOwnProperty("url"));
+
+      // let hd = { name: "后盾人" };
+      // let xj = Object.create(hd, {
+      //   url: {
+      //     value: "houdunren.com",
+      //     enumerable: true
+      //   }
+      // });
+      // for (const key in xj) {
+      //   // console.log(key);
+      //   if( xj.hasOwnProperty(key)) {
+      //     console.log(key);
+      //   }
+      // }
+
+      // let hd = {
+      //   data: [1, 2, 3, 4, 5]
+      // };
+      // console.log(Math.max.apply(null, Object.values(hd.data)));
+      // Object.setPrototypeOf(hd, {
+      //   max: function() {
+      //     return this.data.sort((a, b) => b - a)[0];
+      //   }
+      // });
+      // console.log(hd.max());
+
+      // let xj = {
+      //   lessons: { js: 100, php: 78, node: 78, linux: 125 },
+      //   get data() {
+      //     return Object.values(this.lessons);
+      //   }
+      // };
+      // console.log(xj.data);
+      // console.log(hd.__proto__.max.apply(xj));
+
+      // let xj = {
+      //   lessons: { js: 100, php: 78, node: 78, linux: 125 }
+      // };
+      // console.log(hd.__proto__.max.call(xj, Object.values(xj.lessons)));
+
+      // let btns = document.querySelectorAll("button");
+      // btns = Array.filter.call(btns, item => {
+      //   return item.hasAttribute("class");
+      // // });
+      // console.dir([]);
+
+      // let hd = {
+      //   name: "后盾人"
+      // };
+      // let houdunren = {
+      //   name: "向军",
+      //   show() {
+      //     return this.name;
+      //   }
+      // };
+      // hd.__proto__ = houdunren;
+      // console.log(hd.show());
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // User.prototype = {
+      //   show() {
+      //     return this.name;
+      //   }
+      // };
+      // let xj = new User("向军");
+      // console.log(xj.show());
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // let xj = new User("向军");
+      // console.log(xj);
+      // console.log(User.prototype.constructor == User);
+      // console.log(xj.__proto__ == User.prototype);
+
+      // function hd() {
+      //   this.show = function() {
+      //     return "dhow in object";
+      //   };
+      // }
+      //   hd.prototype.show = function() {
+      //     return "show in prototype";
+      //   };
+      //   const obj = new hd();
+      //   console.log(obj.show());
+
+      // function hd() {}
+      // hd.prototype.name = "hdcms";
+      // const obj1 = new hd();
+      // console.log(obj1.name);
+      // hd.prototype = {
+      //   name: "后盾人"
+      // };
+      // const obj2 = new hd();
+      // console.dir(obj2.name);
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // let hd = new User("后盾人");
+      // let xj = new hd.constructor("向军");
+      // console.log(xj);
+
+      // User.prototype = {
+      //   constructor: User,
+      //   show: function() {}
+      // };
+      // let hd = new User("后盾人");
+      // let xj = new hd.constructor("向军");
+      // console.log(xj);
+
+      // function User(name) {
+      //   this.name = name;
+      //   this.get = function() {
+      //     return this.name;
+      //   };
+
+      // }
+      //   let lisi = new User("小明");
+      //   let wangwu = new User("王五");
+      //   console.log(lisi.get ==  wangwu.get);
+      //   console.log(lisi.get());
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // User.prototype.get = function() {
+      //   return "后盾人" + this.name;
+      // };
+      // let lisi = new User("小明");
+      // let wangwu = new User("王五");
+      // console.log(lisi.get == wangwu.get);
+      // let zhangsan = new lisi.constructor("张三");
+      // console.log(zhangsan);
+
+      // function User(name, age) {
+      //   this,name = name;
+      //   this.age = age;
+      //   this.show = () => {
+      //     return `你在${this.site}的姓名:${this.name}, 年龄${this.age}`;
+      //   }
+      // }
+      // User.prototype.site = '后盾人';
+      // let lisi = new User('李四', 12);
+      // let xiaoming = new User('小明', 32);
+      // console.log(lisi.show());
+      // console.log(xiaoming.show());
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // User.prototype.get = function() {
+      //   return '后盾' + this.name;
+      // }
+      // let lisi = new User('小明');
+      // let wangwu = new User('王五');
+      // console.log(lisi.get == wangwu.get);
+      // lisi.__proto__.get = function() {
+      //   return '后盾人' + this.name;
+      // }
+      // console.log(lisi.get());
+      // console.log(lisi.get());
+      // console.log(wangwu.get());
+
+      // function User(name, age) {
+      //   this.name = name;
+      //   this.age = age;
+      // }
+      // Object.assign(User.prototype, {
+      //   getName() {
+      //     return this.name;
+      //   },
+      //   getAge() {
+      //     return this.age;
+      //   }
+      // });
+      // let lisi = new User('李四', 12);
+      // let xiaoming = new User('小明', 32);
+      // console.log(lisi.getName());
+      // console.log(lisi.__proto__);
+
+      // "use strict"
+      // function User() {}
+      // User.prototype.getName = function() {
+      //   return this.name;
+      // };
+      // function Stu(name) {
+      //   this.name = name;
+      // }
+      // Stu.prototype = new User();
+      // const lisi = new Stu("李四");
+
+      // console.log(lisi.__proto__);
+      // console.log(lisi.getName());
+
+      // function User() {}
+      // User.prototype.getUserName = function() {};
+      // function Admin() {}
+      // Admin.prototype = Object.create(User.prototype);
+      // Admin.prototype.role = function() {};
+      // function Member() {}
+      // Member.protoltype = Object.create(User.prototype);
+      // Member.prototype.email = function() {};
+      // console.log(new Admin());
+      // console.log(new Member());
+      // function user() {}
+      // console.dir(user);
+      // let admin = new Object();
+      // console.log(admin);
+
+      // function Admin() {}
+      // console.log(Admin == Admin.prototype.constructor);
+      // let hd = new Admin.prototype.constructor();
+      // console.log(hd);
+      // let xj  = new Admin();
+      // console.log(xj);
+
+      // function User() {}
+      // function Admin() {}
+      // Admin.prototupe = Object.create(User.prototype);
+      // Admin.prototupe.role = function() {};
+      // let xj = new Admin();
+      // console.log(xj.constructor);
+      // Admin.prototype.constructor = Admin;
+      // let hd = new Admin();
+      // console.log(hd.constructor);
+      // console.log(new hd.constructor());
+
+      // function User() {}
+      // function Admin(name) {
+      //   this.name = name;
+      // }
+      // Admin.prototype = Object.create(User.prototype);
+      // Object.defineProperty(Admin.prototype, "constructor", {
+      //   value:  Admin,
+      //   enumberable: false
+      // });
+      // let hd = new Admin("后盾人");
+      // for(const key in hd) {
+      //   console.log(key);
+      // }
+
+      //       function User() {}
+      //       const lisi = new User();
+      //       User.prototype = {
+      //         show() {
+      //           return "prototype show";
+      //         }
+      //       };
+      // const wangwu = new User();
+      // console.log(wangwu.show());
+      // console.log(lisi.show());
+
+      // function Person() {}
+      // Person.prototype.getName =  function() {}
+      // User.prototype = Object.create(Person.prototype);
+      // User.prototype.constructor = User;
+      // User.prototype.getName = function() {
+      //   Person.prototype.getName.call(this);
+      //   console.log("child");
+      // };
+      // let hd = new User();
+      // hd.getName();
+
+        // function User() {}
+        // User.prototype.show = function() {
+        //   console.log(this.description());
+        // }
+
+        // function Admin() {}
+        // Admin.prototype = Object.create(User.prototype);
+        // Admin.prototype.description = function() {
+        //   return "管理员在此";
+        // };
+
+        // function Member() {}
+        // Member.prototype = Object.create(User.prototype);
+        // Member.prototype.description = function() {
+        //   return "我是会员";
+        // };
+
+        // function Enterprise() {}
+        // Enterprise.prototype = Object.create(User.prototype);
+        // Enterprise.prototype.description = function() {
+        //   return "企业账户";
+        // }
+
+        // for(const obj of [new Admin(), new Member(), new Enterprise()]) {
+        //   obj.show();
+        // }
+
+        // function User(name) {
+        //   this.name = name;
+        //   console.log(this);
+        // }
+        // User.prototype.gerUserName = function() {
+        //   return  this.name;
+        // };
+        // function Admin(name) {
+        //   User(name);
+        // }
+        // Admin.prototype = Object.create(User.prototype);
+        // Admin.prototype.role = function() {};
+        // let xj = new Admin("向军大叔");
+        // console.log(xj);
+
+        // function User(name) {
+        //   this.name = name;
+        //   console.log(this);
+        // }
+        // User.prototype.gerUserName = function() {
+        //   return this.name;
+        // };
+        // function Admin(name) {
+        //   User.call(this, name);
+        // }
+        // Admin.prototype = Object.create(User.prototype);
+        // let xj = new Admin("向军大叔");
+        // console.log(xj.gerUserName());
+
+        // function extend(sub, sup) {
+        //   sub.prototype = Object.create(sup.prototype);
+        //   sub.prototype.constructor = sub;
+        // }
+        // function Access() {}
+        // function User() {}
+        // function Admin() {}
+        // function Member() {}
+
+        // extend(User, Access);
+        // extend(Admin, User);
+        // extend(Member, Access);
+
+        // Access.prototype.rules = function() {};
+        // User.prototype.getName = function() {};
+        // console.log(new Admin());
+        // console.log(new Member());
+
+        // function User(name, age) {
+        //   this.name = name;
+        //   this.age = age;
+        // }
+        // User.prototype. show = function() {
+        //   console.log(this.name, this.age)
+        // };
+
+        // function Admin(name, age) {
+        //   let instance = Object.create(User.prototype);
+        //   User.call(instance, name, age);
+        //   instance.role = function() {
+        //     console.log('Admin.role');
+        //   }
+        //   return instance;
+        // }
+        // let hd = Admin("后盾人", 19);
+        // hd.show();
+
+        // function member(name, age) {
+        //   let instance = Object.create(User.prototype);
+        //   User.call(instance, name, age);
+        //   return instance;
+        // }
+        // let lisi = member("李四", 28);
+        // lisi.show();
+
+        // function extend(sub, sup) {
+        //   sub.prototype = Object.create(sup.prototype);
+        //   sub.prototype.constructor = sub;
+        // }
+        // function Credit() {}
+        // function Request() {}
+        // function User(name, age) {
+        //   this.name = name;
+        //   this.age = age;
+        // }
+        // extend(Request, Credit);
+        // extend(User, Request);
+        // Credit.prototype.total = function() {
+        //   console.log("统计积分");
+        // }
+        // Request.prototype.ajax = function() {
+        //   console.log("请求后台");
+        // };
+        // User.prototype.show = function() {
+        //   console.log(this.name, this.age);
+        // };
+        // function Admin(...args) {
+        //   User.apply(this, args);
+        // }
+        // extend(Admin, User);
+        // let hd = new Admin("向军", 19);
+        // hd.show();
+        // hd.total();
+        // hd.ajax();
+
+        // function extend(sub, sup) {
+        //   sub.prototype = Object.create(sup.prototype);
+        //   sub.prototype.constructor = sub;
+        // }
+
+        // function User(name, age){
+        //   this.name = name;
+        //   this.age = age
+        // }
+
+        // User.prototype.show = function() {
+        //   console.log(this.name, this.age);
+        // };
+
+        // const Credit = {
+        //   total() {
+        //     console.log("统计积分");
+        //   }
+        // };
+        
+        // const Request = {
+        //   ajax() {
+        //     console.log("请求后台");
+        //   }
+        // };
+
+        // function Admin(...args) {
+        //   User.apply(this, args);
+        // }
+        // extend(Admin, User);
+        // Object.assign(Admin.prototype, Request, Credit);
+        // let hd = new Admin("向军", 19);
+        // hd.show();
+        // hd.total();
+        // hd.ajax();
+        // console.dir(Request);
+
+        // function extend(sub, sup) {
+        //   sub.prototype = Object.create(sup.prototype);
+        //   sub.prototype.constructor = sub;
+        // }
+        // function User(name, age) {
+        //   this.name = name;
+        //   this.age = age;
+        // }
+        // User.prototype.show = function() {
+        //   console.log(this.name, this.age);
+        // };
+        // const Request = {
+        //   ajax() {
+        //     return "请求后台";
+        //   }
+        // };
+        // const Credit = {
+        //   __proto__: Request,
+        //   total() {
+        //     console.log(super.ajax() + ",统计积分");
+        //   }
+        // };
+
+        // function Admin(...args) {
+        //   User.apply(this, args);
+        // }
+        // extend(Admin, User);
+        // Object.assign(Admin.prototype, Request, Credit);
+        // let hd = new Admin("向军", 19);
+        // hd.show();
+        // hd.total();
+        // hd.ajax();
+    </script>
+  </body>
+</html>

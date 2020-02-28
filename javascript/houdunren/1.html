@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //  第一章 基础知识
+      // var web = "hdcms";
+      // console.log(typeof web);
+      // web = 99;
+      // console.log(typeof web);
+      // web = {};
+      // console.log(typeof web)
+
+      // var web = 'houdunren';
+      // console.log(web);
+      // let while = 'hdcms';
+
+      // console.log(a);
+      // var a = 1;
+      // console.log(a);
+
+      // var web = "houdunren";
+      // function hd(){
+      // 	if(false){
+      // 		var web = "后盾人";
+      // 	}
+      // 	console.log(web);
+      // }
+      // hd();
+
+      // console.log(x);
+      // let x = 1;
+
+      // var hd = "houdunren";
+      // function run(){
+      // 	console.log(hd);
+      // 	let hd = "hdcms";
+      // }
+      // run();
+
+      // function hd(a = 2, b = a){}
+      // hd();
+
+      // var hd = 'hdcms';
+      // function show(){
+      // 	return hd;
+      // }
+      // console.log(show());
+
+      // function hd(){
+      // 	var web = "后盾人";
+
+      // 	function show(){
+      // 		console.log(web);
+      // 	}
+      // 	show();
+      // 	console.log(web);
+      // }
+      // hd();
+      // console.log(hd().web);
+
+      // var web = "hdcms";
+      // function hd(){
+      // 	var web = "houdunren.com";
+      // 	console.log(web);
+      // }
+      // hd();
+      // console.log(web);
+
+      // function run(){
+      // 	web = "houdunren";
+      // }
+      // run();
+      // console.log(web);
+
+      // for ( i = 0; i < 100; i++){
+      // 	console.log(i);
+      // }
+      // console.log(i);
+
+      // var num = 0;
+      // function show(){
+      // 	var step = 10;
+      // 	do{
+      // 		 res = 0;
+      // 		console.log(num = step++);
+      // 		res = num;
+      // 	} while (step < 20);
+      // 	console.log('结果是${res}');
+      // }
+      // show();
+
+      // var hd = "houdunren";
+      // console.log(window.hd);
+
+      // (function(){
+      // 	var $ = this.$ = {};
+      // 	$.web = "后盾人";
+      // }.bind(window)());
+      // console.log($.web);
+
+      // var a = {
+      // 	b : function(){
+      // 		var that = this;
+      // 		var func = function(){
+      // 			console.log(that.c)
+      // 	}
+      // 	return func();
+      // 	},
+      // 	c: 'Hello!'
+      // }
+      // a.b();
+
+      // {
+      // 	let $ = (window.$ = {});
+      // 	$.web = "houdunren";
+      // }
+      // console.log($.web);
+
+      // if(true){
+      // 	let web = 'hdcms',url = 'houdunren.com';
+      // 	console.log(web);
+      // }
+      // console.log(web);
+
+      // if (true) {
+      // 	let user = "向军大叔";
+      // 	(function() {
+      // 		if (true) {
+      // 			console.log('这是块内访问: ${user}');
+      // 		}
+      // 	})();
+      // }
+
+      // function run() {
+      // 	hd = "houdunren";
+      // 	if (true) {
+      // 		let hd = "hdcms";
+      // 		console.log(hd);
+      // 	}
+      // 	console.log(hd);
+      // }
+      // run();
+
+      // try {
+      // 	const URL = "https://www.houdunren.com";
+      // 	URL = "https://www.hdcms.com";
+      // } catch (error) {
+      // 	throw new Error(error);
+      // }
+
+      // const INFO = {
+      // 	url: 'https://www.houdunren.com',
+      // 	port: '8080'
+      // };
+      // INFO.port = '443';
+      // console.log(INFO);
+
+      // const NAME = '后盾人';
+
+      // function show() {
+      // 	const NAME = '向军大叔';
+      // 	return NAME;
+      // }
+      // console.log(show());
+      // console.log(NAME);
+
+      // var price = 90;
+      // var price = 100;
+      // console.log(`商品价格${price}`);
+
+      // let web  = 'houdunren.com';
+      // if (true) {
+      // 	let web = '后盾人';
+      // }
+
+      // let price = 90;
+      // price = 88;
+      // console.log(`商品价格使${price}`);
+
+      // "use strict"
+      // const INFO = {
+      // 	url: 'https://www.houdunren.com',
+      // 	port: '8080'
+      // };
+      // Object.freeze(INFO);
+      // INFO.port = '443';
+      // console.log(INFO);
+
+      // let a = {
+      // 	web: "后盾人",
+      // };
+      // let b = a;
+      // a.web = "hdcms";
+      // console.log(b);
+
+      // let hd;
+      // console.log(typeof hd);
+
+      // console.log(typeof houdunren);
+      // console.log(houdunren);
+
+      // function hd(web) {
+      // 	console.log(web);
+      // 	return web;
+      // }
+      // console.log(hd());
+
+      // var hd = null;
+      // console.log(typeof hd);
+
+      // "use strict"
+      // url = "houdunren.com";
+
+      // "use strice"
+      // function run() {
+      // 	web = "houdunren";
+      // }
+      // run();
+      // console.log(web);
+
+      // "use strict"
+      // var public = 'houdunren.com';
+
+      // "use strict"
+      // function hd(name, name) {}
+
+      // function strict(){
+      // 	"use strict"
+      // 	return "严格模式";
+      // }
+      // function nostrict(){
+      // 	return "正常模式";
+      // }
+
+      // (function(){
+      // 	"use strict";
+      // 	let url = 'houdunren.com';
+      // })();
+
+      // "use strict"(({ name, url } = { name: "后盾人", url: "houdunren" }));
+      // console.log(name, url);
+
+      // // 第二章 运算符与流程控制
+      // let a = 5,
+      //   b = 3;
+      //   console.log(a * b);
+      //   console.log(a % b);
+
+      // let n = 2;
+      // n *= 2;
+      // console.log(n);
+
+      // let n = 2;
+      // n += 3;
+      // console.log(n);
+      // n -= 5;
+      // console.log(n);
+      // let n = 1;
+      // ++n;
+      // console.log(n);
+      // --n;
+      // console.log(n);
+      // let n = 2;
+      // let f = 30 + ++n;
+      // console.log(f);
+      // let n = 1;
+      // n++;
+      // console.log(n);
+
+      // let n = 2;
+      // let f = 30 + n++;
+      // console.log(f);
+
+      // let a = 1,
+      //   b = 2,
+      //   c = "1";
+      // console.log(a < b);
+      // console.log(a == b);
+      // console.log(a == c);
+      // console.log(a === c);
+      // console.log(a == true);
+      // console.log(a === true);
+
+      // let a = true,
+      //   b = true;
+      // if (a && b) {
+      //   console.log("表达式成立");
+      // }
+
+      // let a = true, b = false;
+      // if (a || b) {
+      //   console.log('表达式成立');
+      // }
+
+      // let a = true, b = false;
+      // if (a && !b) {
+      //   console.log('表达式成立');
+      // }
+
+      // console.log(true || false && false);
+      // console.log((true || false) && false);
+
+      // let a = true, f = false;
+      // console.log(a || f);
+
+      // let a = true, f = false;
+      // console.log(f && a);
+
+      // let sex = prompt("你的性别是?") || "保密";
+      // console.log(sex);
+
+      // let opt = {
+      //   url: ''
+      // };
+
+      // function getUrl(opt){
+      //   opt.url = 'houdunren.com';
+      // }
+      // opt.url || getUrl(opt);
+      // console.log(opt.url);
+
+      // let state = true;
+      // if (true) {
+      //   console.log('表达式成立');
+      // }
+
+      // let state = true;
+      // if (true) {
+      //   console.log('表达式成立');
+      // }
+      // console.log('一直都显示的内容');
+
+        // let n = true ? 1 : 2;
+        // console.log(n);
+        // let f = true ? (1 == true ? 'yes' : 'no') : 3;
+        // console.log(f);
+
+        // function div(options = {}) {
+        //   let div = document.createElement("div");
+        //   div.style.width = options.width ? options.width : "100px";
+        //   div.style.height = options.height ? options.height : "100px";
+        //   div.style.backgroundColor = options.bgcolor ? options.bgcolor : "red";
+        //   document.body.appendChild(div);
+        // }
+        // div();
+
+        // let name = '';
+        // switch (name) {
+        //   case '产品':
+        //     console.log('hdcms.com');
+        //     break;
+        //     case '视频':
+        //       console.log('houdunren.com');
+        //       break;
+        //       default:
+        //         console.log('houdunren.com');
+        // }
+
+        // let error = 'warning';
+        // swith (error) {
+        //   case 'notice':
+
+        // }
+        // let error = 'notice';
+        // switch (error) {
+        //   case 'notice':
+        //   case 'warning':
+        //     console.log('警告或提示信息');
+        //     break;
+        //   case 'error': 
+        //     console.log('错误信息');
+        // }
+
+          // function message (age) {
+          //   switch (true) {
+          //     case age < 15: 
+          //       console.log("儿童");
+          //       break;
+          //     case age < 25: 
+          //       console.log("青少年");
+          //       break;
+          //     case age < 40:
+          //       console.log("青年");
+          //       break; 
+          //     case age < 60: 
+          //       console.log("中年");
+          //       break; 
+          //     case age < 100: 
+          //       console.log("老年");
+          //       break; 
+          //     default:
+          //       console.log("年龄输出错误");
+          //   }
+          // }
+          // message(10);
+
+          // switch (1) {
+          //   case 1:
+          //     console.log(1); 
+          //   case 2:
+          //     console.log(2);
+          //   default:
+          //     console.log("default");
+          // }
+
+          // let row = 5;
+          // document.write(`<table border="1" width="100">`);
+          // while (row-- != 0) {
+          //   document.write(`<tr><td>${row}</td></tr>`)
+          // }
+          // document.write(`</table>`);
+
+          // function hd(row = 20) {
+          //   let start = 0;
+          //   do {
+          //     let n = 0;
+          //     do {
+          //       document.write("*");
+          //     } while (++n <= start);
+          //     document.write("<br />");
+          //   } while (++start <= row);
+          // }
+          // hd();
+
+          // for (let i = 10; i > 0; i--) {
+          //   for (let n = i; n > 0; n--) {
+          //     document.write("*");
+          //   }
+          //   document.write("<br />");
+          // }
+
+          // for (let n = 5; n > 0; n--){
+          //   let i, p, q;
+          //   q = 6;
+          //   for (i = n - 1; i > 0; i--) {
+          //   document.write("^");
+          // }
+          // for (p = 1; p <= 2*(q-n) - 1; p++) {
+          //     document.write("*");
+          // }
+          // document.write("<br />");
+          // }
+          
+          // for (let i = 1; i <= 10; i++) {
+          //   if (i % 2) continue;
+          //   console.log(i);
+          // }
+
+          // let count = 0, num = 100000;
+          // for(let i = 1; i <=100000000; i++) {
+          //   if (i % 2) {
+          //     console.table(i);
+          //     if (++count == num) break;
+          //   }
+          // }
+
+          // houdunren: for (let i = 1; i <= 10; i++) {
+          //   hdcms: for (let n = 1; n <= 10; n++) {
+          //     if (n % 2 != 0) {
+          //       continue hdcms;
+          //     }
+          //     console.log(i, n);
+          //   if (i + n > 15) {
+          //     break houdunren;
+          //     }
+          //   }
+          // }
+
+          // let hd = [
+          //   { title: "第一章 走进js黑洞", lesson: 3},
+          //   { title: "ubuntu19.10配置好用的编程工作站", lesson: 5},
+          //   { title: "媒体查询响应式布局", lesson: 8}
+          // ];
+          // document.write(`<table border="1" width="100%">
+          //   <thead><tr><th>标题</th><th>课程数</th></thead>
+          //     `);
+          //     for (let key in hd) {
+          //       document.write(`
+          //       <tr>
+          //       <td>${hd[key].title}</td>
+          //       <td>${hd[key].lesson}</td>
+          //       </tr>
+          //       `);
+          //     }
+          //     document.write("</table>");
+
+          // let info = {
+          //   name: "后盾人",
+          //   url: "houfunren.com"
+          // };
+          // for (const key in info) {
+          //   if (info.hasOwnProperty(key)) {
+          //     console.log(info[key]);
+          //   }
+          // }
+
+         
+    </script>
+    <!-- <input type="text" name="age" />
+    <span id="msg"></span>
+    <script>
+      let span = document.querySelector("#msg");
+      document
+        .querySelector('[name="age"]')
+        .addEventListener("keyup", function() {
+          span.innerHTML = this.value >= 90 ? "年龄不能超过90岁" : "很好";
+        });
+    </script> -->
+    <!-- <input type="text" name="password" />
+    <input type="text" name="confirm_password" />
+    <br />
+    <span name="name"></span>
+    <script>
+      function queryByName(name) {
+        return document.querySelectorAll(`[name='${name}']`);
+      }
+      let inputs = document.querySelectorAll(
+        "[name='password'],[name='confirm_password']"
+      );
+
+      [...inputs].map(item => {
+        item.addEventListener("keyup", () => {
+          let msg = "";
+          if (
+            queryByName("password").value !=
+              queryByName("confirm_password").value ||
+            queryByName("password").value.length < 5
+          ) {
+            msg = "两次密码不一致或长度错误";
+          }
+          queryByName("msg").innerHTML = msg;
+        });
+      });
+    </script> -->
+
+    <!-- <form action="https://www.houfunren.com" id="form">
+    用户名:<input type="text" name="username" />
+    <hr />
+    <input type="checkbox" name="copyright" />接受协议
+    <hr />
+    <input type="submit" />
+    </form>
+    
+    <script>
+      function query(e1) {
+        return document.querySelector(e1);
+      }
+      query("#form").addEventListener("submit", function(event){
+        let username = query('input[name="username"]').value;
+        let copyright = query('input[name="copyright"]').checkes;
+        console.log(!!username);
+        if(!username || copyright === false){
+          alert("请填写用户名并接受协议");
+          event.preventDefault();
+        }
+      }) -->
+
+      <!-- <input type="password" name="title" />
+      <span></span>
+      <script>
+        let input = document.querySelector('[name="title"]');
+        input.addEventListener("keyup",function(){
+          let length = this.value.length;
+          let msg;
+          if (length > 10) {
+            msg = "密码已经无敌了";
+          } else if (length > 6) {
+            msg = "密码中性安全";
+          } else {
+            msg = "这密码不行";
+          }
+          document.querySelector("span").innerHTML = msg;
+        })
+      </script> -->
+        
+      </body>
+</html>

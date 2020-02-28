@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      /* .hide {
+      display: none;
+    } */
+    body {
+      width: 100vm;
+      height:100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2c3e50;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    div {
+      color: #9b59b6;
+      font-size: 5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    div > span {
+      position: relative;
+      display: inline-block;
+    }
+    .changeColor {
+      animation-name: changeColor;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-iteration-count: 100;
+      animation-timing-function: linear;
+    }
+    @keyframes changeColor {
+      50% {
+        color: #f1c40f;
+        transform: scale(1.5);
+      }
+      to {
+        color: #9b59b6;
+        transform: scale(0.5);
+      }
+    }
+
+    </style>
+  </head>
+  <!-- <body>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </body>
+        <script>
+          let lis = document.querySelectorAll("li");
+          for (const li of lis) {
+              li.addEventListener("click", function(){
+                  this.style.backgroundColor = "green";
+              });
+          }  
+        </script>  -->
+
+  <body>
+    <div>高艺瑄高艺瑄高艺瑄</div>
+    <!-- <div>hdcms</div>
+    <div>houdunren</div> -->
+    <!-- <button message="后盾人">button</button>
+    <button message="hdcms">button</button> -->
+    <script>
+      // const hd = ["hdcms", "houdunren"];
+      // for (const [key, value] of hd.entries()) {
+      //     console.log(key, value);
+      // }
+
+      // let str = 'houdunren';
+      // for (const a of str) {
+      //     console.log(a);
+      // }
+
+      // let arr = [1, 2, 3];
+      // for (const iterator of arr) {
+      //     console.log(iterator);
+      // }
+
+      // for (name in document) {
+      //     console.log(document[name]);
+      // }
+
+      // let a = 1;
+      // console.log(typeof a);
+      // let b = "1";
+      // console.log(typeof b);
+      // var hd;
+      // console.log(typeof hd);
+      // function run() {}
+      // console.log(typeof run());
+      // let c = [1, 2, 3];
+      // console.log(typeof c);
+      // let d = { name: "houdunren.com"};
+      // console.log(typeof d);
+
+      // let hd = [];
+      // let houdunren = {};
+      // console.log(hd instanceof Array);
+      // console.log(houdunren instanceof Object);
+      // let c = [1, 2, 3];
+      // console.log(c instanceof Array);
+      // let d = { name: "houdunren.com" };
+      // console.log(d instanceof Object);
+      // // function User(){};
+      // let hd = new User();
+      // console.log(hd instanceof User);
+
+      // let hd = "houdunren";
+      // let cms = new String("hdcms");
+      // console.log(typeof hd, typeof cms);
+
+      // let hd = "houdunren";
+      // let cms = new String("hdcms");
+      // console.log(hd.length);
+      // console.log(cms.length);
+
+      // let hd = new String('houdunren');
+      // console.log(hd.length);
+      // console.log(hd.toString());
+
+      // let content = '后盾人';
+      // console.log(content);
+
+      // let content = '后盾人 \'houdunren.com\'';
+      // console.log(content);
+
+      // let year = 2010,
+      // name = '后盾人';
+      // console.log(name + '成立于' + year + '年');
+
+      // let web = '后盾人';
+      // web += '网址:houdunren.com';
+      // console.log(web);
+
+      // let url = 'houdunren.com';
+      // document.write(`后盾人网址是${url}大家可以在网站上学习很多技术知识`);
+
+      // function show(title){
+      //   return `后盾人`;
+      // }
+      // console.log(`${show()}`);
+
+      // let lesson = [
+      //   {title: '媒体查询响应式布局'},
+      //   {title: 'FLEX弹性盒模型'},
+      //   {title: 'GRID栅格系统'}
+      // ];
+      // function template(){
+      //   return `<ul>
+      //   ${lesson.map((item)=>`<li>${item.title}</li>`).join("")}
+      //   </ul>`;
+      // }
+
+      // let lesson = 'css';
+      // let web = '后盾人';
+      // tag`访问${web}学习${lesson}前端知识`;
+      // function tag(strings, ...values) {
+      //   console.log(strings);
+      //   console.log(values);
+      // }
+      // document.body.innerHTML = template();
+
+      // let lessons = [
+      //   {title: "后盾人媒体查询响应式布局", author:"后盾人向军"},
+      //   {title: "FLEX弹性盒模型", author: "后盾人"},
+      //   {title: "GRID栅格系统后盾人教程", author:"古老师"}
+      // ];
+      // function links(strings, ...vars) {
+      //   return strings.map((str,key)=>{return (str+(vars[key].replace("后盾人",`<a href="https:www.houdunren.com">后盾人</a>`):""));}).join("");
+      // }
+
+      // console.log("houdunren.com".length);
+
+      // console.log('houdunren.com'.toUpperCase());
+      // console.log('houdunren.com'.toLowerCase());
+
+      // let str = '    houdunrem.com    ';
+      // console.log(str.length);
+      // console.log(str.trim().length);
+
+      // let name = "  houdunren  ";
+      // console.log(name);
+      // console.log(name.trimLeft());
+      // console.log(name.trimRight());
+
+      // console.log('houdunren'.charAt(3));
+      // console.log('houdunren'[3]);
+
+      // let hd = 'houdunren.com';
+      // // console.table(hd);
+      // console.log(hd.slice(3));
+      // console.log(hd.slice(-2));
+      // console.log(hd.slice(3,6));
+      // console.log(hd.slice(3,-1));
+      // console.log(hd.substr(3));
+      // console.log(hd.substr(-2));
+      // console.log(hd.substr(3,6));
+      // console.log(hd.substr(-3,2));
+      // console.log(hd.substring(3));
+      // console.log(hd.substring(-2));
+      // console.log(hd.substring(3,6));
+      // console.log(hd.substring(-3,2));
+
+      // console.log('houdunren.xom'.indexOf('o'));
+      // console.log('houdunren.log'.indexOf('o', 3));
+
+      // console.log('houdunren.xom'.lastIndexOf('o'));
+      // console.log('houdunren.xom'.lastIndexOf('o',7));
+
+      // let str = "houdunren.com";
+      // console.log(str.search("com"));
+      // console.log(str.search("\.com"));
+
+      // console.log('houdunren.com'.includes('o'));
+      // console.log('houdunren.chom'.includes('h',11));
+
+      // console.log('houdunren.com'.startsWith('h'));
+      // console.log('houdunren.com'.startsWith('o', 1));
+
+      // console.log('houdunren.com'.endsWith('com'));
+      // console.log('houdunren.com'.endsWith('m', 0));
+
+      // const words = ["php", "css"];
+      // const title = "我爱在后盾人学习php和css";
+      // const status = words.some(a => {
+      //   return title.includes(a);
+      // });
+      // console.log(status);
+
+      // let name = "houdunren.com";
+      // web = name.replace("houdunren", "hdcms");
+      // console.log(web);
+
+      // let str = "2023/02/12";
+      // console.log(str.replace(/\//g, "-"));
+
+      // const word = ["php", "css"];
+      // const string = "我喜欢在后盾人学习php和css知识";
+      // const title = word.reduce((pre, word) => {
+      //   return pre.replace(word, `<a href="?w=${word}">${word}</a>`);
+      // },string);
+      // document.body.innerHTML += title;
+
+      // let res = "houdunren.com".replace(/u/g, a => {
+      //   return "@";
+      // });
+      // console.log(res);
+
+      // function star(num = 5) {
+      //   return '*'.repeat(num);
+      // }
+      // console.log(star());
+
+      // let phone = "98765432101";
+      // console.log(phone.slice(0, -3) + "*".repeat(3));
+
+      // let name = "hdcms";
+      // console.log(name.split(""));
+
+      // console.log("1, 2, 3".split("2"));
+
+      // let hd = 99 + '';
+      // console.log(typeof hd);
+
+      // let hd = 99;
+      // console.log(typeof String(hd));
+
+      // let arr = ['hdcms', '后盾人'];
+      // console.log(typeof arr.toString());
+
+      // console.log(new Boolean(true));
+      // console.log(new Boolean(false));
+
+      // let hd = true;
+
+      // console.log(3 == true);
+      // console.log(0 == false);
+
+      // console.log(Number("houdunren"));
+      // console.log(Boolean("houdunren"));
+      // console.log("houdunren" == true);
+      // console.log("1" == true);
+
+      // console.log(Number([]));
+      // console.log(Number([3]));
+      // console.log(Number([1, 2, 3]));
+      // console.log([] == false);
+      // console.log([1] == true);
+      // console.log([1, 2, 3] == true);
+
+      // if([1]) console.log("true");
+      // if({1}) console.log("true");
+
+      // let hd = '';
+      // console.log(!!hd);
+      // hd = 0;
+      // console.log(!!hd);
+      // hd = null;
+      // console.log(!!hd);
+      // hd = new Date("2020-2-22 10:33");
+      // console.log(!!hd);
+
+      // let hd = '';
+      // console.log(Boolean(hd));
+      // hd = 0;
+      // console.log(Boolean(hd));
+      // hd = null;
+      // console.log(Boolean(hd));
+      // hd = new Date("2020-2-22 10:33");
+      // console.log(Boolean(hd));
+
+      // while (true) {
+      //   let n = prompt("请输入后盾人成立年份").trim();
+      //   if (!n) continue;
+      //   alert(n == 2010 ? "回答正确" : "回答错误");
+      //   break;
+      // }
+
+      // let hd = new Number(3);
+      // console.log(hd + 3);
+
+      // let num = 99;
+      // console.log(typeof num);
+
+      // console.log(Number.isInteger(1.2));
+      // console.log((16.556).toFixed(2));
+
+      // console.log(Number("houdunren"));
+      // xonsole.log(2 / 'houdunren');
+
+      // var res = 2 / 'houdunren';
+      // if (Number.isNaN(res)) {
+      //   console.log('Error');
+      // }
+
+      // var res = 2 / 'houdunren';
+      // console.log(Object.is(res, NaN));
+
+      // console.log(Number('houdunren'));
+      // console.log(Number(true));
+      // console.log(Number(false));
+      // console.log(Number('9'));
+      // console.log(Number([]));
+      // console.log(Number([5]));
+      // console.log(Number([5, 2]));
+      // console.log(Number({}));
+
+      // console.log(parseInt('   99houdunren'));
+      // console.log(parseInt('18.55'));
+
+      // console.log(parseFloat('   99houdunren'));
+      // console.log(parseFloat('18.55'));
+
+      // let num = document.querySelector("[name='num']").value;
+      // console.log(num + 5);
+      // console.log(num * 1 + 5);
+
+      // console.log(1.556.toFixed(2));
+
+      // console.log(Math.min(1, 2, 3));
+      // console.log(Math.max(1, 2, 3));
+
+      // console.log(Math.max.apply(Math, [1, 2, 3]));
+
+      // console.log(Math.ceil(1.111));
+      // console.log(Math.floor(1.555));
+
+      // console.log(Math.round(1.5));
+
+      // const number = Math.floor(Math.random() * 5);
+      // console.log(number);
+
+      // const number = Math.floor(Math.random() * (5 + 1));
+      // console.log(number);
+
+      // 口算题演草纸
+      // for (let i = 0; i <= 10000; i++) {
+      //   const ul = document.querySelector("ul");
+      //   function random(num) {
+      //     return Math.ceil(Math.random() * num);
+      //   }
+      //   const a5 = document.createElement("li");
+      //   let a1 = `${random(20)}`;
+      //   let a2 = `${random(20)}`;
+      //   let a3 = `${random(20)}`;
+      //   let a4 = parseInt(a1) + parseInt(a2) + parseInt(a3);
+      //   let a6 = parseInt(a1) + parseInt(a2);
+      //   if(a6 <=20) {
+      //   if(a4 <= 20) {
+      //     a5.innerHTML = `${a1}+${a2}+${a3}=`;
+      //     ul.appendChild(a5);
+      //   }
+      // }
+
+      //   const b5 = document.createElement("li");
+      //   let b1 = `${random(20)}`;
+      //   let b2 = `${random(20)}`;
+      //   let b3 = `${random(20)}`;
+      //   let b4 = parseInt(b1) - parseInt(b2) - parseInt(b3);
+      //   let b6 = parseInt(b1) - parseInt(b2);
+      //   if(b6 >= 0 && b6 <= 20){
+      //   if(b4 >= 0 && b4 <= 20 ){
+      //     b5.innerHTML = `${b1}-${b2}-${b3}=`;
+      //     ul.appendChild(b5);
+      //   }
+      // }
+      //   const c5 = document.createElement("li");
+      //   let c1 = `${random(20)}`;
+      //   let c2 = `${random(20)}`;
+      //   let c3 = `${random(20)}`;
+      //   let c4 = parseInt(c1) + parseInt(c2) - parseInt(c3);
+      //   let c6 = parseInt(c1) + parseInt(c2);
+      //   if(c6 >= 0 && c6 <= 20){
+      //   if(c4 > 0 && c4 <= 20 ){
+      //     c5.innerHTML = `${c1}+${c2}-${c3}=`;
+      //     ul.appendChild(c5);
+      //   }
+      // }
+
+      //   const d5 = document.createElement("li");
+      //   let d1 = `${random(20)}`;
+      //   let d2 = `${random(20)}`;
+      //   let d3 = `${random(20)}`;
+      //   let d4 = parseInt(d1) - parseInt(d2) + parseInt(d3);
+      //   let d6 = parseInt(d1) - parseInt(d2);
+      //   if(d6 >= 0 && d6 <= 20){
+      //   if(d4 > 0 && d4 <= 20 ){
+      //     d5.innerHTML = `${d1}-${d2}+${d3}=`;
+      //     ul.appendChild(d5);
+      //   }
+      // }
+      // }
+
+      // const number = Math.floor(Math.random() * (5 - 2)) + 2;
+      // console.log(number);
+
+      // const number = Math.floor(Math.random() * (5 - 2 + 1)) + 2;
+      // console.log(number);
+
+      // let stus = ['小明', '张三', '王五', '爱情'];
+      // let pos = Math.floor(Math.random() * stus.length);
+      // console.log(stus[pos]);
+
+      // let now = new Date();
+      // console.log(now);
+      // console.log(typeof now);
+      // console.log(now * 1);
+      // console.log(Date());
+      // console.log(typeof Date());
+      // console.log(Date.now());
+
+      // const start = Date.now();
+      // for (let i = 0; i < 2000000000; i++) {}
+      // const end = Date.now();
+      // console.log(end - start);
+
+      // let now = new Date('2028-02-22 03:25:02');
+      // console.log(now);
+      // now = new Date(2048, 4, 5, 1, 22, 16);
+      // console.log(now);
+
+      // let hd = new Date("2020-2-22 10:33:12");
+      // console.log(hd * 1);
+      // let now = Date.now();
+      // console.log(now);
+      // console.log(typeof now);
+
+      // console.time("testFor");
+      // for (let i = 0; i < 200000000; i++) {}
+      // console.timeEnd("testFor")
+
+      // let info = [2020, 2, 20, 10, 15, 32];
+      // let date = new Date(...info);
+      // console.dir(date);
+
+      // let hd = new Date("2020-2-22 10:33:12");
+      // console.log(hd * 1);
+      // console.log(Number(hd));
+      // console.log(hd.valueOf());
+      // console.log(hd.getTime());
+
+      // const param = [1990, 2, 22, 13, 22, 19];
+      // const date = new Date(...param);
+      // const timetamp = date.getTime();
+      // console.log(timetamp);
+      // console.log(new Date(timetamp));
+
+      // let time = new Date();
+      // console.log(
+      //   `${time.getFullYear()}-${time.getMonth()}-${time.getDate()}-${time.getHours()}-${time.getMinutes()}-${time.getSeconds()}`
+      // );
+
+      //  console.log(new Array(1, '后盾人', 'hdcms'));
+
+      // const array = ['hdcms', 'houdunren'];
+
+      // const array = [["hdcms"], ["houdunren"]];
+      // console.log(array[1][0]);
+
+      // const array = ["hdcms", "houdunren"];
+      // array.push("houdunren");
+      // console.log(array);
+
+      // let hd = ["后盾人", "hdcms"];
+      // console.log(hd.length);
+
+      // let hd = ["后盾人"];
+      // hd[1] = "hun";
+
+      // let hd = ["后盾人"];
+      // hd[3] = "hdcms";
+      // console.log(hd.length);
+      // console.log(hd);
+
+      // let hd = new Array(3);
+      // console.log(hd.length);
+      // console.log(hd);
+
+      // let hd = Array.of(3);
+      // console.log(hd);
+
+      // hd = Array.of(1, 2, 3);
+      // console.log(hd);
+
+      // console.log(Array.isArray([1, "后盾人", "hdcms"]));
+      // console.log(Array.isArray(9));
+
+      // console.log(([1, 2, 3]).toString());
+      // console.log(String([1, 2, 3]));
+      // console.log([1, 2, 3].join("-"));
+
+      // let str = '后盾人';
+      // console.log(Array.from(str));
+
+      // let user = {
+      //   0: '后盾人',
+      //   '1': 18,
+      //   length: 2
+      // }
+      // console.log(Array.from(user));
+
+      // let btns = document.querySelectorAll("button");
+      // console.log(btns);
+      // Array.from(btns,(item) => {
+      //   item.style.background = 'red';
+      // });
+
+      // let divs = document.querySelectorAll("div");
+      // [...divs].map(function(div){
+      //   div.addEventListener("click",function(){
+      //     this.classList.toggle("hide");
+      //   });
+      // // });
+      // let a = [1, 2, 3];
+      // let b = ['a', '后盾人', ...a];
+      // console.log(b);
+
+      // function hd(...args) {
+      //   console.log(args);
+      // }
+      // hd(1, 2, 3, "后盾人")
+
+      //   let btns = document.querySelectorAll("button");
+      //   btns.map((items) => {
+      //     btns.map((item) => {
+      //     console.log(item); //TypeError: btns.filter is not a function
+      // })
+      //   })
+
+      // let divs = documents.querySelectorAll("div");
+      // [...divs].map(function(div){
+      //   div.addEventListener("click", function(){
+      //     this.classList.toggle("hide");
+      //   });
+      // });
+
+      //  let [name, url] = ['houdunren', 'houdunren.com'];
+      //  console.log(name);
+
+      // function hd() {
+      //   return ['houdunren', 'hdcms'];
+      // }
+      // let [a, b] = hd();
+      // console.log(a);
+
+      // let [a, ...b] = ['后盾人', 'houdunren', 'hdcms'];
+      // console.log(b);
+
+      // let web = "后盾人";
+      // [web, url] = ["hdcms.com", "houdunren.com"];
+      // console.log(web);
+
+      // "use strict"
+      // const[...a] = "houdunren.com";
+      // console.log(a);
+
+      // let [, url] = ['后盾人', 'houdunren.co.'];
+      // console.log(url);
+
+      // let [name, ...arr] = ['后盾人', 'hdcms', 'houdunren.com'];
+      // console.log(name, arr);
+
+      // let [name, site = 'hdcms'] = ['后盾人'];
+      // console.log(site);
+
+      // function hd([a, b]) {
+      //   console.log(a, b);
+      // }
+      // hd(['后盾人', 'hdcms']);
+
+      // let arr = [1, "后盾人", "hdcms"];
+      // arr[1] = '后盾人教程';
+      // console.log(arr);
+
+      // let arr = [1, "后盾人", "hdcms"];
+      // arr[arr.length] = 'houdunren.com';
+      // console.log(arr);
+
+      // let arr = ["后盾人", "hdcms"];
+      // let hd = ["houdunren"];
+      // hd.push(...arr);
+      // console.log(hd);
+
+      // let arr = ["后盾人", "hdcms"];
+      // console.log(arr.push('向军大叔', 'houdunren'));
+      // console.log(arr);
+
+      // function rangeArray(begin, end) {
+      //   const array = [];
+      //   for (let i = begin; i <= end; i++) {
+      //     array.push(i);
+      //   }
+      //   return array;
+      // }
+      // console.log(rangeArray(1, 6));
+
+      // let arr = ['后盾人', 'hdcms'];
+      // console.log(arr.pop());
+      // console.log(arr);
+
+      // let arr = ['后盾人', 'hdcms'];
+      // console.log(arr.shift());
+      // console.log(arr);
+
+      // let arr = ["后盾人", "hdcms"];
+      // console.log(arr.unshift('向军大叔', 'houdunren'));
+      // console.log(arr);
+
+      // console.log([1, 2, 3, 4].fill("houdunren", 1, 5));
+
+      // let arr = [0, 1, 2, 3, 4, 5,];
+      // console.log(arr.slice(1, 3));
+      // let arr = [0-9]
+      // console.log(arr)
+
+      // let arr = [0, 1, 2, 3, 4, 5,];
+      // console.log(arr.slice());
+
+      // let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // console.log(arr.splice(1, 3));
+      // console.log(arr);
+
+      // let arr = ["后盾人", "hdcms"];
+      // arr.length = arr.length - 1;
+      // console.log(arr);
+
+      // let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      //  console.log(arr.splice(1, 2, 'hdcms', '后盾人'));
+      //  console.log(arr);
+
+      // let arr = [0, 1, 2, 3, 4, 5, 6];
+      // console.log(arr.splice(0, 0, "hdcms", "后盾人"));
+      // console.log(arr);
+
+      // function move (array, before, to) {
+      //   if (before < 0 || to >= array.length) {
+      //     console.log("指定位置错误");
+      //     return;
+      //   }
+      //   const newArray = [...array];
+      //   const elem = newArray.splice(before, 1);
+      //   console.log(elem);
+      //   console.log(newArray);
+      //   newArray.splice(to, 0, ...elem);
+      //   console.log(newArray);
+      //   return newArray;
+      // }
+      // const array = [1, 2, 3, 4];
+      // console.table(move(array, 1, 3));
+
+      // let user = [{ name: 'hdcms'}, { name: '后盾人'}];
+      // let cms = user;
+      // user = [];
+      // console.log(user);
+      // console.log(cms);
+
+      // let user = [{ name: 'hdcms'}, { name: '后盾人'}];
+      // user.length = 0;
+      // console.log(user);
+
+      // let user =[{ name: 'hdcms'}, { name: '后盾人'}];
+      // user.splice(0, user.length);
+      // console.log(user);
+
+      // let user = [{ name: 'hdcms'}, { name: '后盾人'}];
+      // while (user.pop()) {};
+      // console.log(user);
+
+      // let arr = [1, '后盾人', 'hdcms'];
+      // console.log(arr.join('-'));
+
+      // let price = '99, 78, 68';
+      // console.log(price.split(','));
+
+      // let array = ['hdcms', 'houdunren'];
+      // let hd = [1, 2];
+      // let cms = [3, 4];
+      // console.log(array.concat(hd, cms));
+
+      // const arr = [1, 2, 3, 4, 5];
+      // console.log(arr.copyWithin(3, 0, 2));
+
+      // let arr = [7, 3, 2, " 8", 2, 6];
+      // console.log(arr.indexOf(2));
+      // console.log(arr.indexOf(8));
+
+      // let arr = [7, 3, 2, 8, 2, 6];
+      // console.log(arr.indexOf(2, 3));
+
+      // let arr = [7, 3, 2, 8, 2, 6];
+      // console.log(arr.lastIndexOf(2));
+
+      // let arr = [7, 3, 2, 8, 2, 6];
+      // console.log(arr.lastIndexOf(2, 5));
+      // console.log(arr.lastInderOf(2, -2));
+
+      // let arr = [7, 3, 2, 6];
+      // console.log(arr.includes(8));
+
+      // function includes (array, item) {
+      //   for (const value of array) {
+      //     if (item === value) {
+      //       return true;
+      //     } else continue;
+      //   }
+      //   return false;
+      // }
+      // console.log(includes([1, 2, 3, 4, 5], 11));
+
+      // let arr = ['hdcms', 'houdunren', 'dhcms'];
+      // let find = arr.find(function (item) {
+      //   return item == 'hdcms';
+      // });
+      // console.log(find);
+
+      // const user = [{ name: '李四' }, { name: '张三' }, { name: '后盾人' } ];
+      // const find = user.includes({ name: '后盾人'});
+      // console.log(find);
+
+      // const user = [{ name: '李四' }, { name: '张三' }, { name: '后盾人' } ];
+      // const find = user.find({ name: '后盾人' });
+      // console.log(find);
+
+      // let arr = [7, 3, 2, '8', 2, 6];
+      // console.log(arr.findIndex(function(v) {
+      //   return v == 8;
+      // }))
+
+      // let arr = [1, 2, 3, 4, 5];
+      // function find (array, callback) {
+      //   for (const value of array) {
+      //     if (callback(value) == true) return value;
+      //   }
+      //   return undefined;
+      // }
+      // let res = find (arr, function(item) {
+      //   return item == 23;
+      // });
+      // console.log(res);
+
+      // Array.prototype.findValue = function (callback) {
+      //   for (const value of this) {
+      //     if (callback (value) ===true ) return value;
+      //   }
+      //   return undefined;
+      // }
+      // let arr = [1, 2, 3, 4, 5];
+      // let re = arr.findValue(function(item) {
+      //   return item == 2;
+      // });
+      // console.log(re);
+
+      // let a = function(num){return ++num;}(2)
+      // console.log(a);
+      // let arr = [1, 4, 2, 9];
+      // console.log(arr.reverse());
+
+      // let arr = [1, 4, 2, 9];
+      // console.log(arr.sort());
+
+      // let arr = [1, 4, 2, 9];
+      // console.log(arr.sort(function(v1, v2) {
+      //   return v2 - v1;
+      // }));
+
+      // let lessons = [
+      //   { title: "媒体查询响应式布局", click:78 },
+      //   { title: "FLEX弹性盒模型", click:12 },
+      //   { title: "MYSQL多表查询随意操作", click:99 }
+      // ];
+
+      // let sortLessin = lessons.sort((v1, v2) => v2.click - v1.click);
+      // console.log(sortLessin);
+
+      // let arr = [1, 5, 3, 9, 7];
+      // function sort( array, callback ) {
+      //   for ( const n in array ) {
+      //     for ( const m in array ) {
+      //       if ( callback ( array[n], array[m] ) < 0 ) {
+      //         let temp = array[n];
+      //         array[n] = array[m];
+      //         array[m] = temp;
+      //       }
+      //     }
+      //   }
+      //   return array;
+      // }
+      // arr = sort(arr, function(a, b){
+      //   return a - b;
+      // });
+      // console.table(arr);
+
+      // let lessons = [
+      //   {title: "媒体查询响应式布局", category: "css"},
+      //   {title: "FLEX弹性盒模型", category: "css"},
+      //   {title: "MYSQL多表查询随意操作", category: "MySQL"}
+      // ];
+      // for (let i = 0; i < lessons.length; i++) {
+      //   lessons[i] = `后盾人: ${lessons[i].title}`;
+      // }
+      // console.log(lessons);
+
+      // let lessons = [
+      //   {title: '媒体查询响应式布局', category: 'css'},
+      //   {title: 'FLEX弹性盒模型', category: 'css'},
+      //   {title: 'MYSQL多表查询随意操作', category: 'css'}
+      // ];
+      // lessons.forEach((item, index, array) => {
+      //   item.title = item.title.substr(0, 5);
+      // });
+      // console.log(lessons);
+
+      // let lessons = [
+      //   {title: '媒体查询响应式布局', category: 'css'},
+      //   {title: 'FLEX弹性盒模型', category: 'css'},
+      //   {title: 'MYSQL多表查询随意操作', category: 'css'}
+      // ];
+      // for (const key in lessons) {
+      //   console.log(`标题: ${lessons[key].title}`)
+      // }
+      // for (const item of lessons) {
+      //   console.log(`
+      //   标题: ${item.title}
+      //   栏目: ${item.category == "css" ? "前端" : "数据库"}
+      //   `);
+      // }
+
+      // const hd = ['houdunren', 'hdcms'];
+      // const iterator = hd.entries();
+      // console.log(iterator.next());
+      // console.log(iterator.next());
+
+      // const hd = ['hdcms', 'houdunren'];
+      // for (const [key, value] of hd.entries()) {
+      //   console.log(key, value);
+      // }
+
+      // function arrayMax(array) {
+      //   let max = array[0];
+      //   for (const elem of array) {
+      //     max = max > elem ? max : elem;
+      //   }
+      //   return max;
+      // }
+      // console.log(arrayMax([1, 3, 2, 9]));
+
+      // const hd = ['houdunren', 'hdcms'];
+      // const keys = hd.keys();
+      // console.log(keys.next());
+      // console.log(keys.next());
+
+      // 'use strict';
+      // const arr = ['a', 'b', 'c', 'houdunren'];
+      // for (const key of arr.keys()) {
+      //   console.log(key);
+      // }
+
+      // const hd = ['houdunren', 'hdcms'];
+      // const values = hd.values();
+      // console.log(values.next());
+      // console.log(values.next());
+      // console.log(values.next());
+
+      // 'use strict';
+      // const arr = ['a', 'b', 'c', 'houdunren'];
+      // for (const value of arr.values()) {
+      //   console.log(value);
+      // }
+
+      // const hd = ['houdunren', 'hdcms'];
+      // const iterator = hd.entries();
+      // let {done, value: [k, v]} = iterator.next();
+      // console.log(v);
+      // everu是递归的检测元素,要求所有元素操作都要返回真结果才为真.
+      // const user = [
+      //   { name: 'lisi', js: 89 },
+      //   { name: 'maliu', js: 55 },
+      //   { name: 'zhangsan', js: 78 },
+      // ];
+      // const result = user.every(function(item, index,array){
+      //   console.log([item, index, array]);
+      // });
+      // console.log(result);
+
+      // let words = ['houdun', 'beijing', 'peixun'];
+      // let title = 'houdunrenbuduanfenxiangjishujiaoxheng';
+      // let state = words.every(function (item, index, array) {
+      //   return title.indexOf(item) >= 0;
+      // });
+      // if (state == false) console.log('biaotibixubaohanguanjianzi');
+
+      // let words = ['houdun', 'beijing', 'peixun'];
+      // let title = 'houdunrenbuduanfeixiangjishujiaocheng';
+      // let state = words.every(function(item, index, array) {
+      //   return title.indexOf(item) >= 0;
+      // });
+      // if (state == false) console.log('biaotibixubaohansuoyouguanjiaci');
+
+      // let words = ['houdun', 'beijing', 'wuhan'];
+      // let title = 'houd1unrenbuduanfenxiangjishujiapcheng';
+      // let state = words.some(function (item, index, array) {
+      //   console.log(title.indexOf(item));
+      //   return title.indexOf(item) >= 0;
+      // });
+      // if(state) console.log('biaotihanyouweiguiguanjiaoci');
+
+      // let lessons = [
+      //   { title: "媒体查询响应式布局", category: "css" },
+      //   { title: "FLEX 弹性盒模型", category: "css" },
+      //   { title: "MYSQL多表查询随意操作", category: "mysql" }
+      // ];
+      // let cssLessons = lessons.filter(function (item, index,array) {
+      //   if (item.category.toLowerCase() == 'css') {
+      //     return true;
+      //   }
+      // });
+      // console.log(cssLessons);
+      
+      // function except(array, excepts) {
+      //   const newArray = [];
+      //   for (const elem of array) {
+      //     if(!excepts.includes(elem)) newArray.push(elem);
+      //   }
+      //     return newArray;
+      // }
+      // const array = [1, 2, 3, 4];
+      // console.log(except(array, [2, 3]));
+
+      // let lessons = [
+      //   { title: "媒体查询响应式布局", category: "css" },
+      //   { title: "FLEX 弹性盒模型", category: "css" },
+      //   { title: "MYSQL多表查询随意操作", category: "mysql" }
+      // ];
+      // // console.log(lessons.map(item => item.title));
+      // lessons = lessons.map(function(item, index, array) {
+      //   item.title = `[houdunren] ${item['title']}`;
+      //   return item;
+      // })
+      // console.log(lessons);
+      
+      // function countArrayElem(array, elem) {
+      //   return array.reduce((total, cur) => (total += cur == elem ? 1 : 0), 0);
+      // }
+      // let numbers = [1, 2, 3, 1, 5];
+      // console.log(countArrayElem(numbers, 1));
+     
+    //  function arrayMax (array) {
+    //    return array.reduce(function() {
+    //      let a, b;
+    //      (max, elem) => (a = max, b = elem,max > elem ? max : elem)
+    //      console.log(a, b);
+    //    }, array[0]
+    //    );
+    //  }
+    //  console.log(arrayMax([1, 3, 2, 9]));
+
+    // let cart = [
+    //   { name: 'iphone', price: 12000 },
+    //   { name: 'imax', price: 25000 },
+    //   { name: 'ipad', price: 3600 }
+    // ];
+    // // function maxPrice(array) {
+    // //   return array.reduce(
+    // //     (goods, elem) => (goods.price > elem.price ? goods : elem),
+    // //     array[0]
+    // //   );
+    // // }
+    // //   console.log(maxPrice(cart));
+    // function getNameByPrice(array, price) {
+    //   return array.reduce((goods, elem) => {
+    //     if (elem.price > price) {
+    //       goods.push(elem);
+    //     }
+    //     return goods;
+    //   },[]).map(elem => elem.name);
+    // }
+    // console.table(getNameByPrice(goods, 10000));
+
+    // let arr = [1, 2, 6, 2, 1];
+    // let filterArr = arr.reduce((pre, cur, index, array) => {
+    //   if (pre.includes(cur) === false){
+    //     pre = [...pre, cur];
+    //   }
+    //   return pre;
+    // },[])
+    // console.log(filterArr);
+
+    let div = document.querySelector('div');
+    [...div.textContent].reduce((pre, cur, index) =>{
+      pre == index && (div.innerHTML = '');
+      let span = document.createElement('span');
+      span.textContent = cur;
+      div.appendChild(span);
+      span.addEventListener('mouseover', function() {
+        this.classList.add('changeColor');
+      });
+      span.addEventListener('animationend', function() {
+        this.classList.remove('changeColor');
+      })
+    }, 0);
+    </script>
+  </body>
+</html>

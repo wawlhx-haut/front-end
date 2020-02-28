@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // class User {}
+      // console.log(new Article());
+      // let Article = class {};
+      // console.log(new User());
+
+      // class User {
+      //   show() {}
+      //   get() {
+      //     console.log("get method");
+      //   }
+      // }
+      // const hd = new User();
+      // hd.get();
+
+      // class User {
+      //   constructor(name) {
+      //     this.name = name;
+      //     this.show = function() {};
+      //   }
+      //   getName() {
+      //     return this.name;
+      //   }
+      // }
+      // const xj = new User("向军大叔");
+      // console.log(xj);
+
+      // constructor(...args) {
+      //   super(...args);
+      // }
+
+      // class User {}
+      // console.log(typeof User);
+
+      // class User {
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   show() {}
+      // }
+      // console.dir(User);
+      // console.log(User == User.prototype.constructor);
+      // function Hd(name) {
+      //   this.name = name;
+      // }
+      // console.dir(Hd);
+      // console.log(Hd == Hd.prototype.constructor);
+
+      // class User {
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   show() {}
+      // }
+      // console.dir(User);
+      // console.log(Object.getOwnPropertyNames(User.prototype));
+
+      // class User {
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   show() {
+      //     consosle.log(this.name);
+      //   }
+      // }
+
+      // function User(name) {
+      //   this.name = name;
+      // }
+      // Hd.prototype.show = function() {
+      //   console.log(this.name);
+      // };
+      // class User {
+      //   site = "后盾人";
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   show() {
+      //     console.log(this.site + ":" + this.name);
+      //   }
+      // }
+      // let hd = new User("向军");
+      // hd.show();
+
+      // class User {
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   show() {
+      //     console.log(this.name);
+      //   }
+      // }
+      // let xj = new User("向军");
+      // for (const key in xj) {
+      //   console.log(key);
+      // }
+      // function Hd(name) {
+      //   this.name = name;
+      // }
+      // Hd.prototype.show = function() {
+      //   console.log(this.name);
+      // };
+      // let obj = new Hd("后盾人");
+      // for (const key in obj) {
+      //   console.log(key);
+      // }
+
+      // class User {
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   show() {
+      //     function test() {
+      //       console.log(this);
+      //     }
+      //     test();
+      //   }
+      // }
+      // let xj = new User("向军");
+      // xj.show();
+      // function Hd(name) {
+      //   this.name = name;
+      // }
+      // Hd.prototype.show = function() {
+      //   let a = this;
+      //   function test() {
+      //     console.log(a);
+      //   }
+      //   test();
+      // };
+      // let obj = new Hd("后盾人");
+      // obj.show();
+
+      // function User() {}
+      // User.site = "后盾人";
+      // console.dir(User);
+      // const hd = new User();
+      // console.log(hd.site);
+      // console.log(User.site);
+
+      // class Request {
+      //   static HOST = "https://www.houdunren.com";
+      //   query(api) {
+      //     return Request.Host + "/" + api;
+      //   }
+      // }
+      // let request = new Request();
+      // console.dir(request);
+
+      // function User() {
+      //   console.log(this);
+      //   this.show = function() {
+      //     return "this is a object function";
+      //   };
+      // }
+      // User.show = function() {
+      //   return "welcom to houdunren";
+      // };
+      // const xj = new User();
+      // console.dir(xj.show());
+      // console.dir(User.show());
+      //   function a (){
+      //     console.log("aa");
+      //     function b() {
+      //       console.log(this);
+      //       function c() {
+      //         console.log(this);
+      //         function d() {
+      //           console.log(this);
+      //         }
+      //       }
+      //     }
+      //   }
+      //   let obj = new a();
+      //  console.log(obj.d);
+
+      // class User {
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      //   static create(name) {
+      //     return new User(name);
+      //   }
+      // }
+      // const xj = User.create("向军大叔");
+      // console.log(xj);
+
+      // const data = [
+      //   { name: "jd", price: 100 },
+      //   { name: "mysq;", price: 212 },
+      //   { name: "vue.js", price: 98 },
+      // ];
+      // class Lesson {
+      //   constructor(data) {
+      //     this.model = data;
+      //   }
+      //   get price() {
+      //     return this.model.price;
+      //   }
+      //   get name() {
+      //     return this.model.name;
+      //   }
+      //   static createBatch(data) {
+      //     return data.map(item => new Lesson(item));
+      //   }
+      //   static MaxPrice(collection) {
+      //     return collection.sort((a, b) => b.price() - a.price())[0];
+      //   }
+      // }
+      // const lessons = Lesson.createBatch(data);
+      // console.log(lessons);
+      // console.log(Lesson.MaxPrice(lessons).name);
+
+      // class User {
+      //   constructor(name) {
+      //     this.data = { name };
+      //   }
+      //   get  name() {
+      //     function a() {
+      //     return this.data.name;
+      //     }
+      //   }
+      //   set name(value) {
+      //     if(value.trim() == "") throw new Error("invalid params");
+      //     this.data.name = value;
+      //   }
+      // }
+      // let hd = new User("向军大叔");
+      // hd.name.a() = "后盾人";
+      // console.log(hd.name);
+
+      // class User {
+      //   url = "houdunren.com";
+      //   constructor(name) {
+      //     this.name = name;
+      //   }
+      // }
+      // let hd = new User("后盾人");
+      // console.log(hd.name, hd.url);
+
+      // class Article {
+      //   _host = "https://houdunren.com";
+
+      //   set host(url) {
+      //     if(!/^https:\/\//i.test(url)) {
+      //       throw new Error("网址错误");
+      //     }
+      //     this._host = url;
+      //   }
+
+      //   lists() {
+      //     return `${this._host}/article`;
+      //   }
+      // }
+      // let article = new Article();
+      // console.log(article.lists());
+      // article.host = "https://hdcms.com";
+      // console.log(article.lists());
+
+      // class Common {
+      //   _host = "https://houdunren.com";
+      //   set host(url) {
+      //     if(!/^https:\/\//i.test(url)) {
+      //       throw new Error("网址错误");
+      //     }
+      //     this._host = url;
+      //   }
+      // }
+      // class Article extends Common {
+      //   lists() {
+      //     return `${this._host}/atricle`;
+      //   }
+      // }
+      // let article = new Article();
+      // console.log(article.lists());
+      // article.host = "https://hdcms.com";
+      // console.log(article.lists());
+
+      // const protecteds = Symbol();
+      // class Common {
+      //   constructor() {
+      //     this[protecteds] = {};
+      //     this[protecteds].host = "https://houdunren.com"
+      //   }
+      //   set host(url) {
+      //     if(!/^https?:/i.test(url)) {
+      //       throw new Error("非常网址");
+      //     }
+      //     this[protecteds].host = url;
+      //   }
+      //   get host() {
+      //     return this[protecteds].host;
+      //   }
+      // }
+      // class User extends Common {
+      //   constructor(name) {
+      //     super();
+      //     this[protecteds].name = name;
+      //   }
+      //   get name() {
+      //     return this[protecteds].name;
+      //   }
+      // }
+      // let hd = new User("后盾人");
+      // hd.host = "https://www.hdcms.com";
+      // console.log(hd.name);
+
+      // const _host = new WeakMap();
+      // class Common {
+      //   constructor() {
+      //     _host.set(this, "https://houdunren.com");
+      //   }
+      //   set host(url) {
+      //     if (!/^https:\/\//i.test(url)) {
+      //       throw new Error("网址错误");
+      //     }
+      //     _host.set(this, url);
+      //   }
+      // }
+
+      // class Article extends Common {
+      //   constructor() {
+      //     super();
+      //   }
+      //   lists() {
+      //     return `${_host.get(this)}`;
+      //   }
+      // }
+      // let article = new Article();
+      // console.log(article.lists());
+      // article.host = "https://hdcms.cocm";
+      // console.log(article.lists());
+
+      const _host = new WeakMap();
+      class Common {
+        constructor() {
+          _host.set(this, "https://houdunren.com");
+        } 
+        set host(url) {
+          if(!/^https:\/\//i.test(url)) {
+            throw new Error("网址错误");
+          } 
+          _host.set(this, url);
+        }
+      }
+      class Article extends Common {
+        constructor() {
+          super();
+        }
+        lists() {
+          return `${_host.get(this)}/article`;
+        }
+      }
+      let article = new Article();
+      console.log(article.lists());
+      article.host = "heeps://hdcms.com";
+      console.log(article.lists());
+    </script>
+  </body>
+</html>
