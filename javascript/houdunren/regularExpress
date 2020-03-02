@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let hd = "houdunren2200hdcms9988";
+      let nums = [...hd].filter(a => !Number.isNaN(parseInt(a)));
+      console.log(nums.join(""));
+    </script>
+  </body>
+</html>
