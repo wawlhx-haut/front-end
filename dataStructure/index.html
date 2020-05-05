@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function isPrime(num) {
+        for (let i = 2; i <= num; i++) {
+          if (num % i == 0) {
+            return "is not a prime";
+          }
+        }
+        return "a prime";
+      }
+      console.log(isPrime(99));
+    </script>
+  </body>
+</html>

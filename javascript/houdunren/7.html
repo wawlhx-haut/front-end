@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      /* div {
+        width: 100px;
+        height: 100px;
+        background: yellowgreen;
+        position: absolute;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <div></div> -->
+    <script>
+      // function internal (callback, delay = 100) {
+      //   let id = setInterval(() => callback(id), delay);
+      // }
+      // const div = document.querySelector("div");
+      // console.dir(div);
+      // internal(timeId => {
+      //   const left = parseInt(window.getComputedStyle(div).left);
+      //   div.style.left = left + 1 + "px";
+      //   if (left > 200) {
+      //     clearInterval(timeId);
+      //     internal(timeId => {
+      //       const width = parseInt(window.getComputedStyle(div).width);
+      //       div.style.width = width - 1 + "px";
+      //       if (width <= 0) clearInterval(timeId);
+      //     }, 10);
+      //   }
+      // }, 10);
+
+      // function loadImage (file, resolve, reject) {
+      //   const image = new Image();
+      //   image.src = file;
+      //   image.onload = () => {
+      //     resolve(image);
+      //   };
+      //   image.onerror = () => {
+      //     rejecr(new Error("load fail"));
+      //   };
+      //   document.body.appendChild(image);
+      // }
+
+      // loadImage(
+      //   "C:\Users\tmgcg\Desktop",
+      //   image => {
+      //     image.style.border = 'solid 5px red';
+      //   },
+      //   error => {
+      //     cosole.log(error);
+      //   }
+      // );
+
+      // function load (file, resolve, reject) {
+      //   const script = document.createElement("script");
+      //   script.src = file;
+      //   script.onload = resolve;
+      //   script.onerror = reject;
+      //   document.body.appendChild(script);
+      // }
+      // load ("C:\Users\tmgcg\git\front-end-study\javascript\houdunren\regexp prior.png", script => {
+      //   console.log(`${script.path[0].src}加载成功`);
+      //   hd();
+      // },
+      //   error => {
+      //   console.log(`${script.srcElement.src}加载失败`);
+      // });
+
+      // function ajax(url,  resolve, rejext) {
+      //   let xhr = new XMLHttpRequest();
+      //   xhr.optn("GET", url);
+      //   xhr.send();
+      //   xhr.onload = function() {
+      //     if (this.status == 200) {
+      //       resolve(JSON.parse(this.response));
+      //     } else {
+      //       reject (this);
+      //     }
+      //   };
+      // }
+      // ajax("http://localhost:8888/php/user.php?name=向军", user => {
+      //   ajax(11)
+      // })
+
+      // let kfc = new Promise((resolve, reject) => {
+      //   console.log('肯德基厨房开始做饭');
+      //   resolve('我是肯德基,你的餐已经做好了')
+      // });
+      // let dad = kfc.then(msg => {
+      //   console.log(`收到肯德基的消息:${msg}`);
+      //   return {
+      //     then(resolve) {
+      //       setTimeout(() => {
+      //         resolve('孩子,我吃了两天秒,不辣,那你可以吃了');
+      //       },2000);
+      //     }
+      //   };
+      // });
+      // let son = dad.then(msg => {
+      //   return new Promise((resolve, reject) => {
+      //     console.log(`收到爸爸的消息:${msg}`);
+      //     setTimeout(() => {
+      //       resolve('妈妈,我和向军爸爸吃完饭了');
+      //     }, 2000);
+      //   });
+      // });
+      // let ma = son.then(msg => {
+      //   console.log(`收到孩子消息:${msg},事情结束`);
+      // });
+
+      // console.log(
+      //   new Promise((resolve, rejece) => {
+      //     console.log('a');
+      //   })
+      // );
+      
+      console.log(
+        new Promise((resolve, reject) => {
+          resolve("fulfilled");
+        })
+      );
+      console.log(
+        new Promise((resolve, reject) => {
+          reject("rejected");
+        })
+      );
+    </script>
+  </body>
+</html>
